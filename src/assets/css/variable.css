@@ -1,0 +1,38 @@
+/* ==========================
+   VARIABLES CSS
+========================== */
+
+:root{
+
+    /* Couleurs principales */
+    --primary-color: #2563EB;
+    --primary-dark: #1D4ED8;
+    --primary-light: #EAF3FF;
+
+    --white: #FFFFFF;
+    --background: #F8FBFF;
+
+    --text-color: #1E293B;
+    --text-light: #64748B;
+
+    --border-color: #E5E7EB;
+
+    --shadow: 0 10px 30px rgba(37,99,235,.08);
+    --radius: 18px;
+    --transition: .3s ease;
+
+    /* Couleurs des domaines */
+
+    --informatique: #2563EB;      /* Bleu */
+    --sante: #EF4444;             /* Rouge */
+    --droit: #F59E0B;             /* Orange */
+    --gestion: #10B981;           /* Vert */
+
+    --lettres: #EC4899;           /* Rose */
+    --sciences-humaines: #8B5CF6; /* Violet */
+    --education: #0EA5E9;         /* Bleu clair */
+    --agronomie: #22C55E;         /* Vert nature */
+
+    
+
+}
