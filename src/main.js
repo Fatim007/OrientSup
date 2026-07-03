@@ -43,12 +43,231 @@ document.querySelector('#app').innerHTML = `
             </a>
         </div>
         <div class="hero-image">
-            <img src="/assets/img/hero/student.png"
-                alt="Étudiant gabonais">
+            <img src="/src/assets/images/choix2.png" alt="Étudiant gabonais">
         </div>
     </div>
 </section>
+  <!-- SECTION 1: DOMAINES -->
+<section class="section-domaines">
+    <div class="container">
+      <div class="section-header">
+        <h2>Explorez par Domaines</h2>
+        <div class="underline"></div>
+      </div>
 
+      <div class="grid-domaines">
+        <a href="#" class="card-domaine">
+          <div class="icon-domaine icon-blue">
+            <img src="" alt="Sciences et Technologies">
+          </div>
+          <h3>Sciences et Technologies</h3>
+          <p>145 filières</p>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="#" class="card-domaine">
+          <div class="icon-domaine icon-red">
+            <img src="" alt="Sciences de la Santé">
+          </div>
+          <h3>Sciences de la Santé</h3>
+          <p>98 filières</p>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="#" class="card-domaine">
+          <div class="icon-domaine icon-yellow">
+            <img src="" alt="Droit et Sciences Politiques">
+          </div>
+          <h3>Droit et Sciences Politiques</h3>
+          <p>72 filières</p>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="#" class="card-domaine">
+          <div class="icon-domaine icon-green">
+            <img src="" alt="Sciences Economiques">
+          </div>
+          <h3>Sciences Economiques</h3>
+          <p>114 filières</p>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="#" class="card-domaine">
+          <div class="icon-domaine icon-purple">
+            <img src="" alt="Lettres, Langues et Arts">
+          </div>
+          <h3>Lettres, Langues et Arts</h3>
+          <p>85 filières</p>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="#" class="card-domaine">
+          <div class="icon-domaine icon-indigo">
+            <img src="" alt="Sciences Humaines">
+          </div>
+          <h3>Sciences Humaines</h3>
+          <p>92 filières</p>
+          <span class="arrow">→</span>
+        </a>
+        <a href="#" class="card-domaine">
+          <div class="icon-domaine icon-orange">
+            <img src="" alt="Éducation et Formation">
+          </div>
+          <h3>Éducation et Formation</h3>
+          <p>67 filières</p>
+          <span class="arrow">→</span>
+        </a>
+        <a href="#" class="card-domaine">
+          <div class="icon-domaine icon-teal">
+            <img src="" alt="Agronomie et Environnement">
+          </div>
+          <h3>Agronomie et Environnement</h3>
+          <p>56 filières</p>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- SECTION 2: CONSEILS -->
+  <section class="section-conseils">
+    <div class="container">
+      <div class="section-header left">
+        <h2>Nos <span>conseils</span> pour bien choisir votre avenir</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="grid-conseils">
+        <div class="item-conseil">
+          <div class="icon-conseil">
+            <img src="" alt="Identifier passions">
+          </div>
+          <div>
+            <h3>Identifiez vos passions</h3>
+            <p>Choisissez un domaine qui vous motive réellement.</p>
+          </div>
+        </div>
+        <div class="item-conseil">
+          <div class="icon-conseil">
+            <img src="" alt="Informer métiers">
+          </div>
+          <div>
+            <h3>Informez-vous sur les métiers</h3>
+            <p>Découvrez les missions, compétences et débouchés.</p>
+          </div>
+        </div>
+        <div class="item-conseil">
+          <div class="icon-conseil">
+            <img src="" alt="Comparer formations">
+          </div>
+          <div>
+            <h3>Comparez les formations</h3>
+            <p>Analysez les programmes, conditions et perspectives.</p>
+          </div>
+        </div>
+        <div class="item-conseil">
+          <div class="icon-conseil">
+            <img src="" alt="Planifier futur">
+          </div>
+          <div>
+            <h3>Planifiez votre futur</h3>
+            <p>Fixez vos objectifs et avancez pas à pas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SECTION 3: ECOLES -->
+  <section class="section-ecoles">
+    <div class="container">
+      <div class="section-header">
+        <h2>Écoles à la une</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="grid-ecoles">
+        <div class="card-ecole">
+          <img src="" alt="Université Omar Bongo" class="ecole-img">
+          <div class="card-ecole-content">
+            <h3>Université Omar Bongo</h3>
+            <p class="location"><img src="" alt="pin" class="icon-pin"> Libreville</p>
+          </div>
+        </div>
+        <div class="card-ecole">
+          <img src="" alt="Institut Pédagogique National" class="ecole-img">
+          <div class="card-ecole-content">
+            <h3>Institut Pédagogique National</h3>
+            <p class="location"><img src="" alt="pin" class="icon-pin"> Libreville</p>
+          </div>
+        </div>
+        <div class="card-ecole">
+          <img src="" alt="USTM" class="ecole-img">
+          <div class="card-ecole-content">
+            <h3>USTM</h3>
+            <p class="location"><img src="" alt="pin" class="icon-pin"> Franceville</p>
+          </div>
+        </div>
+        <div class="card-ecole">
+          <img src="" alt="Ecole Normale Supérieure" class="ecole-img">
+          <div class="card-ecole-content">
+            <h3>Ecole Normale Supérieure</h3>
+            <p class="location"><img src="" alt="pin" class="icon-pin"> Libreville</p>
+          </div>
+        </div>
+      </div>
+      <!-- CTA -->
+      <div class="cta-box">
+        <div class="cta-text">
+          <div class="cta-icon">
+            <img src="" alt="microphone">
+          </div>
+          <div>
+            <h3>Besoin d'un accompagnement personnalisé ?</h3>
+            <p>Nos conseillers sont à votre écoute pour vous aider à faire le bon choix.</p>
+          </div>
+        </div>
+        <div class="cta-buttons">
+          <button class="btn-primary">Prendre rendez-vous</button>
+          <button class="btn-secondary">Nous contacter</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <img src="" alt="Logo School">
+            </div>
+            <span>School</span>
+          </div>
+          <p>Votre plateforme d'orientation pour un avenir réussi.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Domaines</a></li>
+            <li><a href="#">Filières</a></li>
+            <li><a href="#">Écoles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Conseils</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Suivez-nous</h4>
+          <div class="socials">
+            <a href="#"><img src="" alt="Facebook"></a>
+            <a href="#"><img src="" alt="Twitter"></a>
+            <a href="#"><img src="" alt="Instagram"></a>
+  </footer>          
 </main>
 `
 setupCounter(document.querySelector('#counter'))
