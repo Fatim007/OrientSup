@@ -4,16 +4,16 @@ document.querySelector('#app').innerHTML = `
 <header class="header">
     <div class="container">
         <a href="../index.html" class="logo">
-            <img src="/assets/img/logo.png" alt="Logo">
+            <img src="/src/assets/images/Logo.png" alt="Logo">
             <span>Schoolify</span>
         </a>
         <nav class="navbar">
             <ul class="nav-links">
                 <li>
-                    <a href="/pages/domaines.html">Domaines</a>
+                    <a href="/src/pages/domaines.html">Domaines</a>
                 </li>
                 <li>
-                    <a href="/pages/ecoles.html">Écoles</a>
+                    <a href="/src/pages/ecoles.html">Écoles</a>
                 </li>
             </ul>
         </nav>
@@ -38,7 +38,7 @@ document.querySelector('#app').innerHTML = `
                 qui correspondent à votre profil et préparez sereinement
                 votre avenir.
             </p>
-            <a href="/pages/domaines.html" class="btn-primary">
+            <a href=/src/pages/domaines.html class="btn-primary">
                 Domaines
             </a>
         </div>
@@ -48,7 +48,7 @@ document.querySelector('#app').innerHTML = `
     </div>
 </section>
   <!-- SECTION 1: DOMAINES -->
-<section class="section-domaines">
+<section class="section-domaines" id="domaines">
     <div class="container">
       <div class="section-header">
         <h2>Explorez par Domaines</h2>
@@ -58,7 +58,7 @@ document.querySelector('#app').innerHTML = `
       <div class="grid-domaines">
         <a href="#" class="card-domaine">
           <div class="icon-domaine icon-blue">
-            <img src="" alt="Sciences et Technologies">
+            <i class="fa-solid fa-computer" style="color: rgb(116, 192, 252); font-size: 2em;"></i>
           </div>
           <h3>Sciences et Technologies</h3>
           <p>145 filières</p>
@@ -67,7 +67,7 @@ document.querySelector('#app').innerHTML = `
 
         <a href="#" class="card-domaine">
           <div class="icon-domaine icon-red">
-            <img src="" alt="Sciences de la Santé">
+            <i class="fa-solid fa-stethoscope" style="color: var(--sante);font-size: 2em;"></i>
           </div>
           <h3>Sciences de la Santé</h3>
           <p>98 filières</p>
@@ -76,7 +76,7 @@ document.querySelector('#app').innerHTML = `
 
         <a href="#" class="card-domaine">
           <div class="icon-domaine icon-yellow">
-            <img src="" alt="Droit et Sciences Politiques">
+            <i class="fa-solid fa-scale-balanced" style="color: var(--droit);font-size: 2em;"></i>
           </div>
           <h3>Droit et Sciences Politiques</h3>
           <p>72 filières</p>
@@ -85,7 +85,7 @@ document.querySelector('#app').innerHTML = `
 
         <a href="#" class="card-domaine">
           <div class="icon-domaine icon-green">
-            <img src="" alt="Sciences Economiques">
+            <i class="fa-solid fa-building-columns" style="color: var(--gestion);font-size: 2em;"></i>
           </div>
           <h3>Sciences Economiques</h3>
           <p>114 filières</p>
@@ -94,7 +94,7 @@ document.querySelector('#app').innerHTML = `
 
         <a href="#" class="card-domaine">
           <div class="icon-domaine icon-purple">
-            <img src="" alt="Lettres, Langues et Arts">
+            <i class="fa-solid fa-palette" style="color: var(--lettres);font-size: 2em;"></i>
           </div>
           <h3>Lettres, Langues et Arts</h3>
           <p>85 filières</p>
@@ -103,7 +103,7 @@ document.querySelector('#app').innerHTML = `
 
         <a href="#" class="card-domaine">
           <div class="icon-domaine icon-indigo">
-            <img src="" alt="Sciences Humaines">
+            <i class="fa-solid fa-brain" style="color: var(--sciences-humaines);font-size: 2em;"></i>
           </div>
           <h3>Sciences Humaines</h3>
           <p>92 filières</p>
@@ -111,7 +111,7 @@ document.querySelector('#app').innerHTML = `
         </a>
         <a href="#" class="card-domaine">
           <div class="icon-domaine icon-orange">
-            <img src="" alt="Éducation et Formation">
+           <i class="fa-solid fa-chalkboard-user" style="color: var(--education);font-size: 2em;"></i>
           </div>
           <h3>Éducation et Formation</h3>
           <p>67 filières</p>
@@ -119,13 +119,16 @@ document.querySelector('#app').innerHTML = `
         </a>
         <a href="#" class="card-domaine">
           <div class="icon-domaine icon-teal">
-            <img src="" alt="Agronomie et Environnement">
+            <i class="fa-solid fa-leaf" style="color: var(--agronomie);font-size: 2em;"></i>
           </div>
           <h3>Agronomie et Environnement</h3>
           <p>56 filières</p>
           <span class="arrow">→</span>
         </a>
       </div>
+       <div class="section-footer">
+      <a href="#" class="btn-voir-plus">Voir plus →</a>
+    </div>
     </div>
   </section>
   <!-- SECTION 2: CONSEILS -->
@@ -138,7 +141,7 @@ document.querySelector('#app').innerHTML = `
       <div class="grid-conseils">
         <div class="item-conseil">
           <div class="icon-conseil">
-            <img src="" alt="Identifier passions">
+            <i class="fa-solid fa-heart" style="color:var(--primary-color);font-size: 2em;"></i>
           </div>
           <div>
             <h3>Identifiez vos passions</h3>
@@ -147,7 +150,7 @@ document.querySelector('#app').innerHTML = `
         </div>
         <div class="item-conseil">
           <div class="icon-conseil">
-            <img src="" alt="Informer métiers">
+            <i class="fa-brands fa-google" style="color: var(--primary-color);font-size: 2em;"></i>
           </div>
           <div>
             <h3>Informez-vous sur les métiers</h3>
@@ -156,7 +159,7 @@ document.querySelector('#app').innerHTML = `
         </div>
         <div class="item-conseil">
           <div class="icon-conseil">
-            <img src="" alt="Comparer formations">
+            <i class="fa-solid fa-chart-bar" style="color: var(--primary-color);font-size: 2em;"></i>
           </div>
           <div>
             <h3>Comparez les formations</h3>
@@ -165,7 +168,7 @@ document.querySelector('#app').innerHTML = `
         </div>
         <div class="item-conseil">
           <div class="icon-conseil">
-            <img src="" alt="Planifier futur">
+            <i class="fa-solid fa-calendar-days" style="color: var(--primary-color);font-size:2em;"></i>
           </div>
           <div>
             <h3>Planifiez votre futur</h3>
@@ -184,39 +187,42 @@ document.querySelector('#app').innerHTML = `
       </div>
       <div class="grid-ecoles">
         <div class="card-ecole">
-          <img src="" alt="Université Omar Bongo" class="ecole-img">
+          <img src="/src/assets/images/UOB.png" alt="Université Omar Bongo" class="ecole-img">
           <div class="card-ecole-content">
             <h3>Université Omar Bongo</h3>
-            <p class="location"><img src="" alt="pin" class="icon-pin"> Libreville</p>
+            <p class="location"><i class="fa-solid fa-location-dot" style="color: rgb(44, 153, 236);"></i> Libreville</p>
           </div>
         </div>
         <div class="card-ecole">
-          <img src="" alt="Institut Pédagogique National" class="ecole-img">
+          <img src="/src/assets/images/EM-Gabon.png" alt="Institut Pédagogique National" class="ecole-img">
           <div class="card-ecole-content">
-            <h3>Institut Pédagogique National</h3>
-            <p class="location"><img src="" alt="pin" class="icon-pin"> Libreville</p>
+            <h3>EM-Gabon Université</h3>
+            <p class="location"><i class="fa-solid fa-location-dot" style="color: rgb(44, 153, 236);"></i> Libreville</p>
           </div>
         </div>
         <div class="card-ecole">
-          <img src="" alt="USTM" class="ecole-img">
+          <img src="/src/assets/images/USTM.jpg" alt="USTM" class="ecole-img">
           <div class="card-ecole-content">
             <h3>USTM</h3>
-            <p class="location"><img src="" alt="pin" class="icon-pin"> Franceville</p>
+            <p class="location"><i class="fa-solid fa-location-dot" style="color: rgb(44, 153, 236);"></i> Franceville</p>
           </div>
         </div>
         <div class="card-ecole">
-          <img src="" alt="Ecole Normale Supérieure" class="ecole-img">
+          <img src="/src/assets/images/ESGI.png" alt="Ecole Normale Supérieure" class="ecole-img">
           <div class="card-ecole-content">
-            <h3>Ecole Normale Supérieure</h3>
-            <p class="location"><img src="" alt="pin" class="icon-pin"> Libreville</p>
+            <h3>ESGI</h3>
+            <p class="location"><i class="fa-solid fa-location-dot" style="color: rgb(44, 153, 236);"></i> Libreville</p>
           </div>
         </div>
       </div>
+      <div class="section-footer">
+      <a href="#" class="btn-voir-plus">Voir plus →</a>
+    </div>
       <!-- CTA -->
       <div class="cta-box">
         <div class="cta-text">
           <div class="cta-icon">
-            <img src="" alt="microphone">
+            <i class="fa-solid fa-microphone" style="color: var(--primary-color);font-size: 2em;"></i>
           </div>
           <div>
             <h3>Besoin d'un accompagnement personnalisé ?</h3>
@@ -237,7 +243,7 @@ document.querySelector('#app').innerHTML = `
         <div class="footer-col">
           <div class="footer-logo">
             <div class="logo-icon">
-              <img src="" alt="Logo School">
+              <img src="/src/assets/images/Logo.png" alt="Logo School">
             </div>
             <span>School</span>
           </div>
@@ -264,9 +270,8 @@ document.querySelector('#app').innerHTML = `
         <div class="footer-col">
           <h4>Suivez-nous</h4>
           <div class="socials">
-            <a href="#"><img src="" alt="Facebook"></a>
-            <a href="#"><img src="" alt="Twitter"></a>
-            <a href="#"><img src="" alt="Instagram"></a>
+            <a href="#"><i class="fa-brands fa-facebook" style="font-size: 2em;"></i></a>
+            <a href="#"><i class="fa-brands fa-square-whatsapp" style="font-size: 2em;"></i>
   </footer>          
 </main>
 `
