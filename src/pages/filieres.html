@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filières - OrientationApp</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="../assets/css/variable.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/filieres.css" />
+</head>
+<body>
+
+  <!-- Ici : ta barre de navigation habituelle -->
+
+  <main>
+
+    <!-- ============================================================
+         VUE 1 : Liste des filières d'un domaine
+         Affichée quand l'URL est filieres.html?domaine=xxx
+         ============================================================ -->
+    <div class="vue-liste">
+
+      <section class="entete-domaine">
+        <div class="container">
+          <div class="fil-ariane"></div>
+          <h1></h1>
+          <p></p>
+        </div>
+      </section>
+
+      <section class="section-filieres">
+        <div class="container">
+          <h2>Filières disponibles</h2>
+          <div class="grid-filieres"></div>
+        </div>
+      </section>
+
+      <section class="section-etablissements">
+        <div class="container">
+          <h2>Établissements d'excellence</h2>
+          <div class="grid-etablissements"></div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="cta-bandeau">
+          <h3>Besoin d'aide pour choisir ?</h3>
+          <p>Discute avec nos conseillers d'orientation pour affiner ton choix.</p>
+          <div class="actions">
+            <a href="#" class="btn btn-principal">Être conseillé</a>
+            <a href="#" class="btn btn-secondaire">Voir tous les domaines</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============================================================
+         VUE 2 : Détail d'une filière
+         Affichée quand l'URL est filieres.html?domaine=xxx&filiere=yyy
+         ============================================================ -->
+    <div class="vue-detail">
+
+      <section class="entete-filiere">
+        <div class="container">
+          <div class="fil-ariane"></div>
+          <h1></h1>
+          <p class="resume"></p>
+          <div class="meta">
+            <span><i class="fa-solid fa-clock"></i> <span class="meta-duree"></span></span>
+            <span><i class="fa-solid fa-graduation-cap"></i> <span class="meta-niveau"></span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="bloc-detail">
+        <div class="container">
+          <h2><i class="fa-solid fa-book-open"></i> Aperçu du Programme</h2>
+          <p class="apercu-texte"></p>
+        </div>
+      </section>
+
+      <section class="bloc-detail">
+        <div class="container">
+          <h2><i class="fa-solid fa-briefcase"></i> Débouchés Professionnels</h2>
+          <ul class="liste-puces liste-debouches"></ul>
+        </div>
+      </section>
+
+      <section class="bloc-detail">
+        <div class="container">
+          <h2><i class="fa-solid fa-lightbulb"></i> Compétences Acquises</h2>
+          <ul class="liste-puces liste-competences"></ul>
+        </div>
+      </section>
+
+      <section class="bloc-detail">
+        <div class="container">
+          <h2><i class="fa-solid fa-clipboard-check"></i> Admission</h2>
+          <div class="encart-admission">
+            <p><strong>Conditions :</strong></p>
+            <ul class="liste-puces liste-conditions"></ul>
+            <p style="margin-top:14px;"><strong>Séries de bac recommandées :</strong></p>
+            <ul class="liste-puces liste-filieres-bac"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="bloc-detail">
+        <div class="container">
+          <h2><i class="fa-solid fa-school"></i> Établissements qui proposent cette filière</h2>
+          <div class="grid-etablissements"></div>
+        </div>
+      </section>
+
+      <section class="cta-finale">
+        <h3>Prêt à lancer votre carrière en <span class="nom-filiere-cta"></span> ?</h3>
+        <div class="actions">
+          <a href="#" class="btn btn-principal lien-ecoles">Voir les écoles</a>
+          <a href="#" class="btn btn-secondaire">Consulter les conseillers</a>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Ici : ton footer habituel -->
+
+  <!-- IMPORTANT : data.js doit être chargé avant filieres.js -->
+  <script src="../data.js"></script>
+  <script src="../assets/pagesJS/filieres.js"></script>
+</body>
+</html>

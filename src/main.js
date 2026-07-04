@@ -1,10 +1,9 @@
 import '../src/assets/css/style.css'
-import { setupCounter } from './counter.js'
 document.querySelector('#app').innerHTML = `
 <header class="header">
     <div class="container">
         <a href="../index.html" class="logo">
-            <img src="/src/assets/images/Logo.png" alt="Logo">
+            <img src="/src/assets/images/Logo-removebg-preview.png" alt="Logo">
             <span>Schoolify</span>
         </a>
         <nav class="navbar">
@@ -43,7 +42,7 @@ document.querySelector('#app').innerHTML = `
             </a>
         </div>
         <div class="hero-image">
-            <img src="/src/assets/images/choix2.png" alt="Étudiant gabonais">
+            <img src="/src/assets/images/choix2.jpg" alt="Étudiant gabonais">
         </div>
     </div>
 </section>
@@ -243,7 +242,7 @@ document.querySelector('#app').innerHTML = `
         <div class="footer-col">
           <div class="footer-logo">
             <div class="logo-icon">
-              <img src="/src/assets/images/Logo.png" alt="Logo School">
+              <img src="/src/assets/images/Logo-removebg-preview.png" alt="Logo School">
             </div>
             <span>School</span>
           </div>
