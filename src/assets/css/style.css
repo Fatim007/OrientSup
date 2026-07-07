@@ -85,10 +85,7 @@
 }
 
 
-/* ===========================
-            HERO
-===========================*/
-
+/* HERO */
 .hero{
     position:relative;
     overflow:hidden;
@@ -147,7 +144,7 @@
     height:50px ;
     text-decoration:none;
     background-color:var(--primary-color);
-    color:#ffffff;
+    color:white;
     border-radius:15px;
     font-size:1.3rem;
     font-weight:600;
@@ -239,7 +236,7 @@ button {
   padding: 0 20px;
 }
 
-/* ========== SECTIONS GLOBAL ========== */
+/* SECTION GLOBAL */
 section {
   padding: 64px 0;
 }
@@ -275,7 +272,7 @@ section {
   margin: 12px 0 0;
 }
 
-/* ========== SECTION DOMAINES ========== */
+/* SECTION DOMAINE */
 .section-domaines {
   background: var(--white);
 }
@@ -354,7 +351,7 @@ section {
 .section-footer {
   margin-top: 40px;
   display: flex;
-  justify-content: flex-start; /* 👈 Aligne à gauche */
+  justify-content: flex-start; 
 }
 
 .btn-voir-plus {
@@ -372,9 +369,9 @@ section {
 .btn-voir-plus:hover {
   background: var(--primary-color);
   color: var(--white);
-  transform: translateX(4px); /* Petit effet de glissement */
+  transform: translateX(4px); 
 }
-/* ========== SECTION CONSEILS ========== */
+/* SECTION CONSEIL */
 .section-conseils {
   background: var(--primary-light);
 }
@@ -420,7 +417,7 @@ section {
   font-size: 0.95rem;
 }
 
-/* ========== SECTION ECOLES ========== */
+/* SECTION ECOLES */
 .section-ecoles {
   background: var(--white);
 }
@@ -553,7 +550,7 @@ section {
   background: rgba(255, 255, 255, .1);
 }
 
-/* ========== FOOTER ========== */
+/* Footer */
 .footer {
   background: #0F172A;
   color: var(--text-light);
@@ -647,7 +644,7 @@ section {
   font-size: 0.875rem;
 }
 
-/* ========== RESPONSIVE ========== */
+/* RESPONSIVE */
 @media (min-width: 768px) {
   .grid-domaines {
     grid-template-columns: repeat(4, 1fr);

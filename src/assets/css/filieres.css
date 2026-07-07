@@ -13,6 +13,7 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
+  
 }
 
 /* Masqué par défaut, affiché par le JS selon la vue active */
@@ -30,8 +31,9 @@
 .entete-domaine {
   background: linear-gradient(135deg, var(--couleur-domaine), color-mix(in srgb, var(--couleur-domaine) 70%, black));
   color: #fff;
-  padding: 48px 24px;
+
   border-radius: 0 0 20px 20px;
+  margin-top: 20px;
 }
 
 .entete-domaine .fil-ariane {
@@ -203,7 +205,8 @@
 .entete-filiere {
   background: var(--couleur-domaine);
   color: #fff;
-  padding: 48px 24px;
+  padding:8 24px;
+  margin-top: 20px;
 }
 
 .entete-filiere .fil-ariane {
@@ -232,7 +235,9 @@
 
 .bloc-detail {
   padding: 32px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: px solid #e5e7eb;
+  margin-top: 20px;
+
 }
 
 .bloc-detail h2 {
@@ -288,6 +293,11 @@
   color: #fff;
   text-align: center;
   padding: 48px 24px;
+  margin-top: 20px;
+  border-radius: 15px;
+  min-width: 650px;
+  width: 70%;
+  margin: auto;
 }
 
 .cta-finale .actions {
@@ -312,4 +322,8 @@
 .cta-finale .btn-secondaire {
   border: 1px solid #fff;
   color: #fff;
+}
+
+.footer {
+    margin-top: 10px;
 }

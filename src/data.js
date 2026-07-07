@@ -47,21 +47,123 @@ const DOMAINES = [
             "Dossier scolaire (moyenne générale)",
             "Entretien de motivation",
           ],
-          filieresBac: ["Sciences Mathématiques", "Sciences Physiques", "Sciences et Technologies"],
+          filieresBac: ["Bac D", "Bac C", "Bac technologique", "Bac litteraire conditionné"],
         },
         etablissements: [
-          { nom: "École Nationale Supérieure d'Informatique", ville: "Alger", note: 4.7 },
-          { nom: "Institut Polytechnique du Numérique", ville: "Casablanca", note: 4.4 },
+          { nom: "École Supérieure de Science de Gestion et d'Informatique (ESGI)", ville: "Libreville, Cité Damas", note: "Scolarité adaptéé au Gabonais Economiquement faible"  },
+          { nom: "Institut Africaine d'Informatique (IAI)", ville: "Libreville, Carrefour IAI", note: 4.4 },
         ],
       },
-      // Ajoute ici les autres filières du domaine "Sciences et technologies"
-      // (Réseaux, Intelligence Artificielle, Génie Civil, etc.)
+
+      {
+        id: "genie-civil",
+        nom: "Génie Civil",
+        resume: "Concevez et réalisez les infrastructures qui façonnent les villes et soutiennent le developpement économique",
+        duree: "3 ans (Licence) ou 5 ans (Master)",
+        niveau: "Licence / Master",
+        apercu:
+          "Le Génie Civil forme des professionnels capables de concevoir, construire et entretenir les infrastructures essentielles, comme les routes, les ponts et bâtiments.",
+        debouches: [
+          "Ingénieur Génie Civil",
+          "Conducteur de travaux",
+          "Chef de chantier",
+          "Bureau d'Etude",
+        ],
+        competences: [
+          "Administration des réseau informatique",
+          "Configuration des équipement réseau ",
+          "Maintenance des sytemes de communication",
+          "sécurité Réseau",
+        ],
+        admission: {
+          conditions: [
+            "Baccalauréat scientifique ou technique",
+            "Dossier scolaire (moyenne générale)",
+            "Entretien de motivation",
+          ],
+          filieresBac: ["Bac D", "Bac C", "Bac technologique"],
+        },
+        etablissements: [
+          
+          { nom: "Université Polytechnique de Masuku (USTM)", ville: "Franceville", note: 4.4 },
+        ],
+      },
+         {
+        id: "reseau-telecom",
+        nom: "Réseau et Télécomunication",
+        resume: "Participer à la conception et à la gestion des réseaux qui permettent de communiquer et d'accéder à internet partout dans le monde.",
+        duree: "2ans (DUT), 3 ans (Licence) ou 5 ans (Master)",
+        niveau: "DUT/ Licence / Master",
+        apercu:
+          "La filière Réseau et Télécommunication forme des professionnels capables d'installer, configurer et gérer les réseaux informatique ainsi que les systèmes de communication. Elle permet d'assurer la transmission fiable des odnnées, de la voix et d'internet, indispensable aux entreprises et aux particuliers",
+        debouches: [
+          "Administrateur Réseau",
+          "Technicien Télécommunications",
+          "Ingénieur Réseau",
+          "Architecte Réseau",
+        ],
+        competences: [
+          "Administration des réseau informatique",
+          "Configuration des équipement réseau ",
+          "Maintenance des sytemes de communication",
+          "sécurité Réseau",
+        ],
+        admission: {
+          conditions: [
+            "Baccalauréat scientifique ou technique",
+            "Dossier scolaire (moyenne générale)",
+            "Entretien de motivation",
+          ],
+          filieresBac: ["Bac D", "Bac C", "Bac technologique", "Bac litteraire conditionné"],
+        },
+        etablissements: [
+          { nom: "École Supérieure de Science de Gestion et d'Informatique (ESGI)", ville: "Libreville, Cité Damas", note: "Scolarité adaptéé au Gabonais Economiquement faible"  },
+          { nom: "Université Polytechnique de Masuku (USTM)", ville: "Franceville", note: 4.4 },
+        ],
+      },
+
+       {
+        id: "genie-electrique",
+        nom: "Génie Electrique",
+        resume: "Développez les compétences nécessaires pour produire, distribuer et gérer l'énergie qui alimente notre monde.",
+        duree: "3 ans (Licence) ou 5 ans (Master)",
+        niveau: "Licence / Master",
+        apercu:
+          "Le Génie Electrique forme des spécialistes de la conception, de l'installation et de la maintenance des systèmes électriques utilisés dans les bâtiments, les industries et les réseaux d'énergie",
+        debouches: [
+          "Ingénieur Electricien",
+          "Technicien electrique",
+          "Chargé d'exploitation électrique",
+          "Consultatnt en énergie",
+        ],
+        competences: [
+          "Installation électrique",
+          "Electrotechnique",
+          "Maintenance des équipements électrique",
+          "Energie renouvelable",
+        ],
+        admission: {
+          conditions: [
+            "Baccalauréat scientifique ou technique",
+            "Dossier scolaire (moyenne générale)",
+            "Entretien de motivation",
+          ],
+          filieresBac: ["Bac D", "Bac C", "Bac technologique"],
+        },
+        etablissements: [
+          
+          { nom: "Université Polytechnique de Masuku (USTM)", ville: "Franceville", note: 4.4 },
+        ],
+      },
+    //  ajout des filières plus tard
     ],
     etablissementsExcellence: [
-      { nom: "École Nationale Supérieure d'Informatique", ville: "Alger", note: 4.7 },
-      { nom: "Institut Polytechnique du Numérique", ville: "Casablanca", note: 4.4 },
+      { nom: "Université Polytechnique de Masuku", ville: "Franceville", note: 4.7 },
+      { nom: "Institut Africaine d'Informatique", ville: "Libreville", note: 4.4 },
     ],
   },
+
+  
  
   {
     id: "sante",
@@ -86,15 +188,15 @@ const DOMAINES = [
           "Gestes d'urgence",
         ],
         admission: {
-          conditions: ["Baccalauréat scientifique", "Concours d'entrée national", "Entretien"],
-          filieresBac: ["Sciences Physiques", "Sciences de la Vie et de la Terre"],
+          conditions: ["Baccalauréat scientifique", "Concours d'entrée national", "Analyse des dossiers"],
+          filieresBac: ["Bac D de préférence", "Bac C"],
         },
         etablissements: [
-          { nom: "Faculté de Médecine d'Alger", ville: "Alger", note: 4.6 },
+          { nom: "Unisersité des Sciences de la Santé", ville: "Libreville, Owendo", note: 4.6 },
         ],
       },
     ],
-    etablissementsExcellence: [{ nom: "Faculté de Médecine d'Alger", ville: "Alger", note: 4.6 }],
+    etablissementsExcellence: [{ nom: "Université des Sciences de la Santé", ville: "Libreville", note: 4.6 }],
   },
  
   {
@@ -176,7 +278,7 @@ const DOMAINES = [
         etablissements: [{ nom: "École Supérieure de Traduction", ville: "Alger", note: 4.4 }],
       },
     ],
-    etablissementsExcellence: [{ nom: "École Supérieure de Traduction", ville: "Alger", note: 4.4 }],
+    etablissementsExcellence: [{ nom: "Université Oumar Bongo ODIMBA", ville: "Libreville", note: 4.4 }],
   },
  
   {
