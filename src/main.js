@@ -1,4 +1,5 @@
 import '../src/assets/css/style.css'
+import './data.js';
 document.querySelector('#app').innerHTML = `
 <header class="header">
     <div class="container">
@@ -12,7 +13,7 @@ document.querySelector('#app').innerHTML = `
                     <a href="/src/pages/domaines.html">Domaines</a>
                 </li>
                 <li>
-                    <a href="/src/pages/ecoles.html">Écoles</a>
+                    <a href="/src/pages/ecoles.html">Établissements</a>
                 </li>
             </ul>
         </nav>
@@ -274,4 +275,8 @@ document.querySelector('#app').innerHTML = `
   </footer>          
 </main>
 `
+document.addEventListener("DOMContentLoaded", () => {
+  afficherEcoles(".grid-ecoles", ecoles, 4); // 4 écoles seulement sur la home
+  // ... tes autres appels d'initialisation existants
+});
 setupCounter(document.querySelector('#counter'))
