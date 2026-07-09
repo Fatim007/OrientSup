@@ -756,38 +756,80 @@ function getFiliereById(domaineId, filiereId) {
 const ecoles = [
   {
     id: 1,
-    nom: "Université Omar Bongo",
-    logo: "/src/assets/images/UOB.png",
-    localisation: "Libreville",
-    type: "public",
-    whatsapp: "24107XXXXXX",
-    siteWeb: "https://exemple.com"
-  },
-  {
-    id: 2,
     nom: "EM-Gabon Université",
     logo: "/src/assets/images/EM-Gabon.png",
     localisation: "Libreville",
     type: "prive",
-    whatsapp: "24107XXXXXX",
-    siteWeb: "https://exemple.com"
+    whatsapp: "",
+    siteWeb: "https://em-gabon.nicepage.io/"
   },
   {
-    id: 3,
+    id: 2,
     nom: "USTM",
     logo: "/src/assets/images/USTM.jpg",
     localisation: "Franceville",
     type: "public",
-    whatsapp: "24107XXXXXX",
-    siteWeb: "https://exemple.com"
+    whatsapp: "",
+    siteWeb: "https://univ-masuku.org/"
   },
+
+   {
+    id: 3,
+    nom: "Université Omar Bongo",
+    logo: "/src/assets/images/UOB.png",
+    localisation: "Libreville",
+    type: "public",
+    whatsapp: "",
+    siteWeb: "https://univuob.org/"
+  },
+
   {
     id: 4,
     nom: "ESGI",
     logo: "/src/assets/images/ESGI.png",
     localisation: "Libreville",
     type: "prive",
-    whatsapp: "24107XXXXXX",
+    whatsapp: "",
+    siteWeb: "https://www.facebook.com/esgigabon/?locale=fr_FR&utm_source=chatgpt.com"
+  },
+
+  {
+    id: 5,
+    nom: "EPIKAIZO University",
+    logo: "/src/assets/images/EU Gabon.png",
+    localisation: "Libreville",
+    type: "prive",
+    whatsapp: "",
+    siteWeb: "https://www.facebook.com/EpikaizoUniversity/"
+  },
+
+    {
+    id: 6,
+    nom: "Institut Nationale des Sciences de Gestion ",
+    logo: "/src/assets/images/ings.png",
+    localisation: "Libreville",
+    type: "prive",
+    whatsapp: "https://whatsapp.com/channel/0029VaZIEoA5kg6yLRCyvH2j",
     siteWeb: "https://exemple.com"
+  },
+
+    {
+    id: 7,
+    nom: "Ecole des Mines et de Metallurgie de Mouanda",
+    logo: "/src/assets/images/emm.jpg",
+    localisation: "Mouanda",
+    type: "Public",
+    whatsapp: " 24106298317.",
+    siteWeb: "https://www.e3mg.ga"
+  },
+
+    {
+    id: 8,
+    nom: "BBS",
+    logo: "/src/assets/images/BBS.png",
+    localisation: "Libreville",
+    type: "prive",
+    whatsapp: "24104730497.",
+    siteWeb: "https://www.bbs-school.gabonshopping.com/site/administration_administration_de_bbs_school_gabon_20.php"
   }
 ];

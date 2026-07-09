@@ -59,7 +59,7 @@
 .nav-links a{
     text-decoration:none;
     color:var(--text-color);
-    font-size:1.3rem;
+    font-size:clamp(0.85rem, 1.2rem, 1.3rem);
     font-weight:600;
     transition:var(--transition);
 }
@@ -90,7 +90,7 @@
     position:relative;
     overflow:hidden;
     padding-top:130px;
-    min-height:100vh;
+    height:clamp(50vh, 90vh, 100vh);
     background:
     linear-gradient(
         90deg,
@@ -118,7 +118,7 @@
 }
 
 .hero-content h1{
-    font-size:4.5rem;
+    font-size:clamp(1rem, 4.5rem, 5rem);
     line-height:1.15;
     color:var(--text-color);
     margin-bottom:30px;
@@ -130,7 +130,7 @@
 
 .hero-content p{
     width:80%;
-    font-size:1.15rem;
+    font-size:clamp(0.85rem, 1.15rem, 1.20rem);
     color:var(--text-light);
     line-height:1.8;
     margin-bottom:40px;
@@ -146,7 +146,7 @@
     background-color:var(--primary-color);
     color:white;
     border-radius:15px;
-    font-size:1.3rem;
+    font-size:clamp(1rem, 1.2rem, 1.8rem);
     font-weight:600;
     transition:.3s;
     margin-bottom: 20px;
@@ -166,7 +166,7 @@
 }
 
 .hero-image img{
-    width:100%;
+    width:clamp(30%, 100%, 100%);
     display:block;
     height: auto;
     position: relative;
@@ -523,16 +523,17 @@ section {
   flex-wrap: wrap;
 }
 
-.btn-primary {
+.btn-primary2 {
   background: var(--white);
   color: var(--primary-color);
   font-weight: 600;
   padding: 12px 20px;
   border-radius: 12px;
   transition: var(--transition);
+  font-size: clamp(0.85em, 1em, 1.3em);
 }
 
-.btn-primary:hover {
+.btn-primary2:hover {
   background: var(--primary-light);
 }
 
@@ -647,7 +648,7 @@ section {
 }
 
 /* RESPONSIVE */
-@media (min-width: 768px) {
+@media (min-width:768px){
   .grid-domaines {
     grid-template-columns: repeat(4, 1fr);
   }

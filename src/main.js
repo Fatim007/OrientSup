@@ -15,6 +15,9 @@ document.querySelector('#app').innerHTML = `
                 <li>
                     <a href="/src/pages/ecoles.html">Établissements</a>
                 </li>
+                <li>
+                    <a href="/src/pages/annonces.html">Annonces</a>
+                </li>
             </ul>
         </nav>
         <a href="/pages/connexion.html" class="btn-login">
@@ -38,7 +41,7 @@ document.querySelector('#app').innerHTML = `
                 qui correspondent à votre profil et préparez sereinement
                 votre avenir.
             </p>
-            <a href=/src/pages/domaines.html class="btn-primary">
+            <a href="/src/pages/domaines.html" class="btn-primary">
                 Domaines
             </a>
         </div>
@@ -127,7 +130,7 @@ document.querySelector('#app').innerHTML = `
         </a>
       </div>
        <div class="section-footer">
-      <a href="#" class="btn-voir-plus">Voir plus →</a>
+      <a href="/src/pages/domaines.html" class="btn-voir-plus">Voir plus →</a>
     </div>
     </div>
   </section>
@@ -182,7 +185,7 @@ document.querySelector('#app').innerHTML = `
   <section class="section-ecoles">
     <div class="container">
       <div class="section-header">
-        <h2>Écoles à la une</h2>
+        <h2>Établissements à la une</h2>
         <div class="underline"></div>
       </div>
       <div class="grid-ecoles">
@@ -216,7 +219,7 @@ document.querySelector('#app').innerHTML = `
         </div>
       </div>
       <div class="section-footer">
-      <a href="#" class="btn-voir-plus">Voir plus →</a>
+      <a href="/src/pages/ecoles.html" class="btn-voir-plus">Voir plus →</a>
     </div>
       <!-- CTA -->
       <div class="cta-box">
@@ -225,13 +228,13 @@ document.querySelector('#app').innerHTML = `
             <i class="fa-solid fa-microphone" style="color: var(--primary-color);font-size: 2em;"></i>
           </div>
           <div>
-            <h3>Besoin d'un accompagnement personnalisé ?</h3>
-            <p>Nos conseillers sont à votre écoute pour vous aider à faire le bon choix.</p>
+            <h3>Explore toutes les opportunités</h3>
+            <p>Compare les domaines, les filières et les établissements en 1 clic.</p>
           </div>
         </div>
         <div class="cta-buttons">
-          <button class="btn-primary">Prendre rendez-vous</button>
-          <button class="btn-secondary">Nous contacter</button>
+          <button class="btn-primary2">Voir tous les domaines</button>
+          <button class="btn-secondary">Voir tous les établissements</button>
         </div>
       </div>
     </div>
@@ -252,10 +255,10 @@ document.querySelector('#app').innerHTML = `
         <div class="footer-col">
           <h4>Navigation</h4>
           <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Domaines</a></li>
-            <li><a href="#">Filières</a></li>
-            <li><a href="#">Écoles</a></li>
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/src/pages/domaines.html">Domaines</a></li>
+            <li><a href="/src/pages/domaines.html">Etablissements</a></li>
+            <li><a href="/src/pages/annonces.html">Anonces</a></li>
           </ul>
         </div>
 

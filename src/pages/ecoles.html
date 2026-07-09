@@ -10,11 +10,38 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="/src/assets/images/Logo-removebg-preview.png" alt="Logo">
+            <span>Schoolify</span>
+        </a>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li>
+                    <a href="../index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="/src/pages/domaines.html">Domaines</a>
+                </li>
+                <li>
+                    <a href="/src/pages/ecoles.html">Établissements</a>
+                </li>
+                <li>
+                    <a href="/src/pages/annonces.html">Annonces</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="/pages/connexion.html" class="btn-login">
+            Se connecter
+        </a>
+    </div>
+</header>
 
-  <section class="section-ecoles-page">
+ <section class="section-ecoles-page">
     <div class="container">
       <div class="section-header">
-        <h2>Toutes les écoles</h2>
+        <h2>Tous les Etablissements</h2>
         <div class="underline"></div>
       </div>
 
@@ -24,6 +51,43 @@
     </div>
   </section>
 
+   <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <img src="/src/assets/images/Logo-removebg-preview.png" alt="Logo School">
+            </div>
+            <span>School</span>
+          </div>
+          <p>Votre plateforme d'orientation pour un avenir réussi.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/src/pages/domaines.html">Domaines</a></li>
+            <li><a href="/src/pages/domaines.html">Etablissements</a></li>
+            <li><a href="/src/pages/annonces.html">Anonces</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Conseils</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Suivez-nous</h4>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook" style="font-size: 2em;"></i></a>
+            <a href="#"><i class="fa-brands fa-square-whatsapp" style="font-size: 2em;"></i>
+  </footer> 
   <script src="/src/data.js"></script>
   <script src="/src/assets/pagesJS/ecoles.js"></script>
 </body>
