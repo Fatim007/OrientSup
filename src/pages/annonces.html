@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/annonces.css">
+  <title>Annonces - Bourses et Concours</title>
+</head>
+<body>
+
+  <div class="container">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-text">
+        <h1>Annonces</h1>
+        <p>Découvrez les dernières <span>bourses et concours d'entrée</span> <br> pour saisir <span>toutes les opportunités</span>.</p>
+      </div>
+      <img src="https://cdn-icons-png.flaticon.com/512/3602/3602123.png" alt="megaphone" class="megaphone">
+    </div>
+
+    <!-- SECTION BOURSES -->
+    <div class="section">
+      <div class="section-header">
+        <h2><span class="icon">🎓</span> Bourses</h2>
+        <a href="#" class="voir-tout">Voir toutes les bourses →</a>
+      </div>
+      <div id="bourses-list" class="cards-list"></div>
+    </div>
+
+    <!-- SECTION CONCOURS -->
+    <div class="section">
+      <div class="section-header">
+        <h2><span class="icon">📄</span> Concours d'entrée</h2>
+        <a href="#" class="voir-tout">Voir tous les concours →</a>
+      </div>
+      <div id="concours-list" class="cards-list"></div>
+    </div>
+
+    <!-- BANNER NOTIFICATION -->
+    <div class="banner">
+      <div class="banner-text">
+        <h3>🔔 Ne manquez aucune opportunité !</h3>
+        <p>Abonnez-vous pour recevoir les nouvelles annonces par email.</p>
+      </div>
+      <button id="btn-notif">Activer les notifications →</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/assets/pagesJS/annonces.js"></script>
+  <script type="module" src="/src/data.js"></script>
+</body>
+</html>

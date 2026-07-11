@@ -1,5 +1,7 @@
-import '../src/assets/css/style.css'
-import './data.js';
+import '../src/assets/pagesJS/data2.js';
+import '../src/assets/pagesJS/domaines.js';
+import '../src/assets/css/style.css';
+import '../src/assets/css/domaines.css';
 document.querySelector('#app').innerHTML = `
 <header class="header">
     <div class="container">
@@ -52,88 +54,19 @@ document.querySelector('#app').innerHTML = `
 </section>
   <!-- SECTION 1: DOMAINES -->
 <section class="section-domaines" id="domaines">
-    <div class="container">
-      <div class="section-header">
-        <h2>Explorez par Domaines</h2>
-        <div class="underline"></div>
-      </div>
+  <div class="container">
+    <div class="section-header">
+      <h2>Explorez par Domaines</h2>
+      <div class="underline"></div>
+    </div>
 
-      <div class="grid-domaines">
-        <a href="#" class="card-domaine">
-          <div class="icon-domaine icon-blue">
-            <i class="fa-solid fa-computer" style="color: rgb(116, 192, 252); font-size: 2em;"></i>
-          </div>
-          <h3>Sciences et Technologies</h3>
-          <p>145 filières</p>
-          <span class="arrow">→</span>
-        </a>
+    <div class="grid-domaines" data-limit="8"></div>
+  </div>
 
-        <a href="#" class="card-domaine">
-          <div class="icon-domaine icon-red">
-            <i class="fa-solid fa-stethoscope" style="color: var(--sante);font-size: 2em;"></i>
-          </div>
-          <h3>Sciences de la Santé</h3>
-          <p>98 filières</p>
-          <span class="arrow">→</span>
-        </a>
-
-        <a href="#" class="card-domaine">
-          <div class="icon-domaine icon-yellow">
-            <i class="fa-solid fa-scale-balanced" style="color: var(--droit);font-size: 2em;"></i>
-          </div>
-          <h3>Droit et Sciences Politiques</h3>
-          <p>72 filières</p>
-          <span class="arrow">→</span>
-        </a>
-
-        <a href="#" class="card-domaine">
-          <div class="icon-domaine icon-green">
-            <i class="fa-solid fa-building-columns" style="color: var(--gestion);font-size: 2em;"></i>
-          </div>
-          <h3>Sciences Economiques</h3>
-          <p>114 filières</p>
-          <span class="arrow">→</span>
-        </a>
-
-        <a href="#" class="card-domaine">
-          <div class="icon-domaine icon-purple">
-            <i class="fa-solid fa-palette" style="color: var(--lettres);font-size: 2em;"></i>
-          </div>
-          <h3>Lettres, Langues et Arts</h3>
-          <p>85 filières</p>
-          <span class="arrow">→</span>
-        </a>
-
-        <a href="#" class="card-domaine">
-          <div class="icon-domaine icon-indigo">
-            <i class="fa-solid fa-brain" style="color: var(--sciences-humaines);font-size: 2em;"></i>
-          </div>
-          <h3>Sciences Humaines</h3>
-          <p>92 filières</p>
-          <span class="arrow">→</span>
-        </a>
-        <a href="#" class="card-domaine">
-          <div class="icon-domaine icon-orange">
-           <i class="fa-solid fa-chalkboard-user" style="color: var(--education);font-size: 2em;"></i>
-          </div>
-          <h3>Éducation et Formation</h3>
-          <p>67 filières</p>
-          <span class="arrow">→</span>
-        </a>
-        <a href="#" class="card-domaine">
-          <div class="icon-domaine icon-teal">
-            <i class="fa-solid fa-leaf" style="color: var(--agronomie);font-size: 2em;"></i>
-          </div>
-          <h3>Agronomie et Environnement</h3>
-          <p>56 filières</p>
-          <span class="arrow">→</span>
-        </a>
-      </div>
-       <div class="section-footer">
+  <div class="section-footer">
       <a href="/src/pages/domaines.html" class="btn-voir-plus">Voir plus →</a>
-    </div>
-    </div>
-  </section>
+  </div>
+</section>
   <!-- SECTION 2: CONSEILS -->
   <section class="section-conseils">
     <div class="container">
@@ -278,8 +211,3 @@ document.querySelector('#app').innerHTML = `
   </footer>          
 </main>
 `
-document.addEventListener("DOMContentLoaded", () => {
-  afficherEcoles(".grid-ecoles", ecoles, 4); // 4 écoles seulement sur la home
-  // ... tes autres appels d'initialisation existants
-});
-setupCounter(document.querySelector('#counter'))

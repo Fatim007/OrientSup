@@ -1,19 +1,4 @@
- 
-/**
- * data.js
- * -----------------------------------------------------------
- * Source unique de données pour toute la plateforme.
- * Chaque domaine référence une variable CSS de couleur (définie
- * dans variable.css) et contient la liste de ses filières.
- *
- * -> Pour ajouter une filière : copie un objet existant dans le
- *    tableau "filieres" du domaine concerné et modifie les champs.
- * -> Pour ajouter un domaine : copie un objet du tableau
- *    DOMAINES et donne-lui un "id" unique (utilisé dans l'URL).
- * -----------------------------------------------------------
- */
-
-  const DOMAINES = [
+export const DOMAINES = [
   {
     id: "sciences-tech",
     nom: "Sciences et technologies",
@@ -742,15 +727,16 @@
     etablissementsExcellence: [{ nom: "Université Polytechnique de Masuku", ville: "Franceville", note: 4.5 }],
   },
 ];
- 
+
 // Accès pratique par id, utilisé dans domaines.js et filieres.js
-function getDomaineById(id) {
+export function getDomaineById(id) {
   return DOMAINES.find((d) => d.id === id) || null;
 }
- 
-function getFiliereById(domaineId, filiereId) {
+
+export function getFiliereById(domaineId, filiereId) {
   const domaine = getDomaineById(domaineId);
   if (!domaine) return null;
   return domaine.filieres.find((f) => f.id === filiereId) || null;
 }
- 
+
+

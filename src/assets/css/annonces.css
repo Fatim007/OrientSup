@@ -1,0 +1,264 @@
+/* =======================================
+   RESET + VARIABLES FLUIDES
+   ======================================= */
+:root {
+  --padding-x: clamp(16px, 5vw, 40px);
+  --title-size: clamp(26px, 4vw, 36px);
+  --text-size: clamp(14px, 1.5vw, 16px);
+  --card-padding: clamp(18px, 3vw, 24px);
+  --gap: clamp(12px, 2vw, 20px);
+}
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+body { 
+  background: #f8f9fa; 
+  color: #1a1a1a; 
+  padding: var(--padding-x); 
+}
+.container { 
+  max-width: 1200px; 
+  width: 100%;
+  margin: 0 auto; 
+}
+
+/* =======================================
+   HEADER - FLUIDE
+   ======================================= */
+.header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: var(--gap);
+  margin-bottom: clamp(30px, 5vw, 50px);
+  flex-wrap: wrap;
+}
+.header-text h1 { 
+  font-size: var(--title-size); 
+  font-weight: 700; 
+  margin-bottom: 10px; 
+}
+.header-text p { 
+  color: #555; 
+  line-height: 1.6; 
+  font-size: var(--text-size); 
+}
+.header-text span { 
+  color: #2563eb; 
+  font-weight: 600; 
+}
+.megaphone { 
+  width: clamp(60px, 10vw, 90px); 
+  height: clamp(60px, 10vw, 90px); 
+  flex-shrink: 0;
+}
+
+/* =======================================
+   SECTIONS
+   ======================================= */
+.section { 
+  margin-bottom: clamp(30px, 5vw, 50px); 
+}
+.section-header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.section-header h2 { 
+  font-size: clamp(18px, 2.5vw, 22px); 
+  font-weight: 600; 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+}
+.icon { font-size: clamp(20px, 3vw, 24px); }
+.voir-tout { 
+  color: #2563eb; 
+  text-decoration: none; 
+  font-weight: 600; 
+  font-size: clamp(13px, 1.4vw, 14px);
+  white-space: nowrap;
+}
+.voir-tout:hover { text-decoration: underline; }
+
+/* =======================================
+   CARD - FLUIDE
+   ======================================= */
+.card { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background: white; 
+  border-radius: 16px; 
+  padding: var(--card-padding); 
+  margin-bottom: 16px; 
+  border-left: 5px solid; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+  transition: 0.3s; 
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+.card:hover { 
+  transform: translateX(6px); 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+}
+
+.card-left { 
+  display: flex; 
+  gap: var(--gap); 
+  flex: 1 1 60%;
+  min-width: 250px;
+}
+.card-icon { 
+  width: clamp(40px, 6vw, 48px); 
+  height: clamp(40px, 6vw, 48px); 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: clamp(20px, 3vw, 24px); 
+  flex-shrink: 0; 
+}
+.card-content h3 { 
+  font-size: clamp(15px, 2vw, 17px); 
+  font-weight: 600; 
+  margin-bottom: 6px; 
+}
+.card-content .tag { 
+  font-size: clamp(11px, 1.3vw, 12px); 
+  color: #666; 
+  margin-bottom: 8px; 
+  display: flex; 
+  align-items: center; 
+  gap: 6px; 
+  font-weight: 500;
+}
+.card-content .tag::before { content: "●"; font-size: 10px; }
+.card-content p { 
+  font-size: clamp(13px, 1.5vw, 14px); 
+  color: #555; 
+  line-height: 1.5;
+}
+
+.card-right { 
+  display: flex; 
+  align-items: center; 
+  gap: var(--gap); 
+  border-left: 1px solid #eee; 
+  padding-left: var(--gap); 
+  flex: 0 0 auto;
+}
+.card-info { 
+  text-align: right; 
+  font-size: clamp(12px, 1.3vw, 13px); 
+}
+.card-info .label { 
+  color: #888; 
+  display: flex; 
+  align-items: center; 
+  gap: 5px; 
+  justify-content: flex-end; 
+  margin-bottom: 4px;
+}
+.card-info .value { 
+  font-weight: 600; 
+  margin-bottom: 8px;
+  color: #333;
+}
+.arrow-btn { 
+  width: clamp(36px, 5vw, 40px); 
+  height: clamp(36px, 5vw, 40px); 
+  border-radius: 50%; 
+  border: none; 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  text-decoration: none;
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: bold;
+  transition: 0.2s;
+}
+.arrow-btn:hover { transform: scale(1.1); }
+
+/* COULEURS */
+.blue { border-color: #2563eb; } 
+.blue .card-icon { background: #eff6ff; } 
+.blue .arrow-btn { background: #eff6ff; color: #2563eb; }
+.green { border-color: #16a34a; } 
+.green .card-icon { background: #f0fdf4; } 
+.green .arrow-btn { background: #f0fdf4; color: #16a34a; }
+.purple { border-color: #9333ea; } 
+.purple .card-icon { background: #faf5ff; } 
+.purple .arrow-btn { background: #faf5ff; color: #9333ea; }
+
+/* =======================================
+   BANNER - FLUIDE
+   ======================================= */
+.banner { 
+  background: #eff6ff; 
+  border-radius: 16px; 
+  padding: var(--card-padding); 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+.banner-text h3 { 
+  font-size: clamp(16px, 2.2vw, 18px); 
+  margin-bottom: 6px; 
+  font-weight: 600;
+}
+.banner-text p { 
+  font-size: clamp(13px, 1.5vw, 14px); 
+  color: #555; 
+}
+#btn-notif { 
+  background: #2563eb; 
+  color: white; 
+  border: none; 
+  padding: clamp(10px, 2vw, 12px) clamp(16px, 3vw, 20px); 
+  border-radius: 10px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  font-size: clamp(13px, 1.5vw, 14px);
+  transition: 0.2s;
+  white-space: nowrap;
+}
+#btn-notif:hover { background: #1d4ed8; }
+
+/* =======================================
+   BREAKPOINT MOBILE: < 768px
+   Passe en colonne
+   ======================================= */
+@media screen and (max-width: 767px) {
+  .header { flex-direction: column; text-align: center; }
+  .section-header { flex-direction: column; align-items: flex-start; }
+
+  .card { 
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+  .card-left { flex: 1 1 100%; }
+  .card-right { 
+    border-left: none; 
+    padding-left: 0; 
+    margin-top: 16px; 
+    width: 100%; 
+    justify-content: space-between; 
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+  }
+  .card-info { text-align: left; }
+  .card-info .label { justify-content: flex-start; }
+
+  .banner { flex-direction: column; text-align: center; }
+  #btn-notif { width: 100%; }
+}

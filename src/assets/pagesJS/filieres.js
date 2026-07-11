@@ -13,6 +13,7 @@
  * Tout est généré à partir de DOMAINES (voir data.js).
  * -----------------------------------------------------------
  */
+ // vérifie que le chemin est correct
 
 function lireParametresURL() {
   const params = new URLSearchParams(window.location.search);

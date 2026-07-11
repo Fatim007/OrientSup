@@ -10,11 +10,11 @@
  *   filieres.html?domaine=sciences-tech
  * -----------------------------------------------------------
  */
-
+import { DOMAINES } from '../pagesJS/data2.js';
 function creerCarteDomaine(domaine) {
   // On crée le lien <a class="card-domaine">
   const carte = document.createElement("a");
-  carte.href = `filieres.html?domaine=${domaine.id}`;
+  carte.href = `/src/pages/filieres.html?domaine=${domaine.id}`;
   carte.className = "card-domaine";
 
   // La couleur du domaine est appliquée en variable CSS inline,
@@ -35,15 +35,23 @@ function creerCarteDomaine(domaine) {
   return carte;
 }
 
-function afficherDomaines() {
+function afficherDomaines(limit = null) {
   const grille = document.querySelector(".grid-domaines");
   if (!grille) return;
 
-  grille.innerHTML = ""; // on vide avant de générer
+  grille.innerHTML = "";
 
-  DOMAINES.forEach((domaine) => {
+  const domainesAAfficher = limit ? DOMAINES.slice(0, limit) : DOMAINES;
+
+  domainesAAfficher.forEach((domaine) => {
     grille.appendChild(creerCarteDomaine(domaine));
   });
 }
 
-document.addEventListener("DOMContentLoaded", afficherDomaines);
+document.addEventListener("DOMContentLoaded", () => {
+  const grille = document.querySelector(".grid-domaines");
+  if (!grille) return;
+
+  const limit = grille.dataset.limit ? parseInt(grille.dataset.limit, 10) : null;
+  afficherDomaines(limit);
+});
