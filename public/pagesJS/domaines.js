@@ -10,7 +10,7 @@
  *   filieres.html?domaine=sciences-tech
  * -----------------------------------------------------------
  */
-import { DOMAINES } from '../pagesJS/data2.js';
+import { DOMAINES } from './data2.js';
 function creerCarteDomaine(domaine) {
   // On crée le lien <a class="card-domaine">
   const carte = document.createElement("a");

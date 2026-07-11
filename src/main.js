@@ -1,12 +1,12 @@
-import '../src/assets/pagesJS/data2.js';
-import '../src/assets/pagesJS/domaines.js';
+import '../public/pagesJS/data2.js';
+import '../public/pagesJS/domaines.js';
 import '../src/assets/css/style.css';
 import '../src/assets/css/domaines.css';
 document.querySelector('#app').innerHTML = `
 <header class="header">
     <div class="container">
         <a href="../index.html" class="logo">
-            <img src="/src/assets/images/Logo-removebg-preview.png" alt="Logo">
+            <img src="/images/Logo-removebg-preview.png" alt="Logo">
             <span>Schoolify</span>
         </a>
         <nav class="navbar">
@@ -48,7 +48,7 @@ document.querySelector('#app').innerHTML = `
             </a>
         </div>
         <div class="hero-image">
-            <img src="/src/assets/images/choix2.jpg" alt="Étudiant gabonais">
+            <img src="/images/choix2.jpg" alt="Étudiant gabonais">
         </div>
     </div>
 </section>
@@ -123,28 +123,28 @@ document.querySelector('#app').innerHTML = `
       </div>
       <div class="grid-ecoles">
         <div class="card-ecole">
-          <img src="/src/assets/images/UOB.png" alt="Université Omar Bongo" class="ecole-img">
+          <img src="/images/UOB.png" alt="Université Omar Bongo" class="ecole-img">
           <div class="card-ecole-content">
             <h3>Université Omar Bongo</h3>
             <p class="location"><i class="fa-solid fa-location-dot" style="color: rgb(44, 153, 236);"></i> Libreville</p>
           </div>
         </div>
         <div class="card-ecole">
-          <img src="/src/assets/images/EM-Gabon.png" alt="Institut Pédagogique National" class="ecole-img">
+          <img src="/images/EM-Gabon.png" alt="Institut Pédagogique National" class="ecole-img">
           <div class="card-ecole-content">
             <h3>EM-Gabon Université</h3>
             <p class="location"><i class="fa-solid fa-location-dot" style="color: rgb(44, 153, 236);"></i> Libreville</p>
           </div>
         </div>
         <div class="card-ecole">
-          <img src="/src/assets/images/USTM.jpg" alt="USTM" class="ecole-img">
+          <img src="/images/USTM.jpg" alt="USTM" class="ecole-img">
           <div class="card-ecole-content">
             <h3>USTM</h3>
             <p class="location"><i class="fa-solid fa-location-dot" style="color: rgb(44, 153, 236);"></i> Franceville</p>
           </div>
         </div>
         <div class="card-ecole">
-          <img src="/src/assets/images/ESGI.png" alt="Ecole Normale Supérieure" class="ecole-img">
+          <img src="/images/ESGI.png" alt="Ecole Normale Supérieure" class="ecole-img">
           <div class="card-ecole-content">
             <h3>ESGI</h3>
             <p class="location"><i class="fa-solid fa-location-dot" style="color: rgb(44, 153, 236);"></i> Libreville</p>
@@ -179,7 +179,7 @@ document.querySelector('#app').innerHTML = `
         <div class="footer-col">
           <div class="footer-logo">
             <div class="logo-icon">
-              <img src="/src/assets/images/Logo-removebg-preview.png" alt="Logo School">
+              <img src="/images/Logo-removebg-preview.png" alt="Logo School">
             </div>
             <span>School</span>
           </div>
