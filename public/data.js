@@ -837,3 +837,76 @@ const ANNONCES = [
 function getAnnonceById(id) {
   return ANNONCES.find((a) => a.id === id) || null;
 }
+
+/**
+ * data-ecoles.js
+ * -----------------------------------------------------------
+ * Données des établissements affichés sur ecoles.html
+ *
+ * Champs :
+ *  - id           : identifiant unique textuel
+ *  - nom          : nom de l'établissement
+ *  - logo         : chemin vers l'image/logo
+ *  - localisation : ville
+ *  - type         : "public" ou "prive"
+ *  - whatsapp     : numéro au format international sans "+" ni espaces
+ *                   (ex: "24177123456") -> OMIS si l'école n'est pas
+ *                   contactable par WhatsApp (ex: grandes écoles publiques)
+ *  - siteWeb      : URL complète -> OMIS si l'école n'a pas de site web
+ *
+ * Important : whatsapp et siteWeb sont optionnels. S'ils sont absents,
+ * ecoles.js ne doit pas afficher le bouton correspondant.
+ * -----------------------------------------------------------
+ */
+
+const ECOLES = [
+  {
+    id: "uob",
+    nom: "Université Omar Bongo",
+    logo: "/images/UOB.png",
+    localisation: "Libreville",
+    type: "public",
+    siteWeb: "https://www.uob.ga",
+    // pas de whatsapp : grande école publique, non contactable ainsi
+  },
+  {
+    id: "em-gabon",
+    nom: "EM-Gabon Université",
+    logo: "/images/EM-Gabon.png",
+    localisation: "Libreville",
+    type: "prive",
+    whatsapp: "24177000000",
+    siteWeb: "https://www.emgabon.com",
+  },
+  {
+    id: "ustm",
+    nom: "USTM",
+    logo: "/images/USTM.jpg",
+    localisation: "Franceville",
+    type: "public",
+    siteWeb: "https://www.ustm.ga",
+    // pas de whatsapp
+  },
+  {
+    id: "esgi",
+    nom: "ESGI",
+    logo: "/images/ESGI.png",
+    localisation: "Libreville",
+    type: "prive",
+    whatsapp: "24162906045",
+    siteWeb: "https://www.esgi-gabon.com",
+  },
+  {
+    id: "iai",
+    nom: "Institut Africain d'Informatique (IAI)",
+    logo: "/images/IMSA.png",
+    localisation: "Libreville, Carrefour IAI",
+    type: "public",
+    // ni whatsapp, ni siteWeb pour l'instant
+  },
+];
+
+// Accès pratique par id
+function getEcoleById(id) {
+  return ECOLES.find((e) => e.id === id) || null;
+}
