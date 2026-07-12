@@ -13,6 +13,7 @@ export default defineConfig({
         filieres: resolve(__dirname, 'src/pages/filieres.html'),
         ecoles: resolve(__dirname, 'src/pages/ecoles.html'),
         annonces: resolve(__dirname, 'src/pages/annonces.html'),
+        inscription: resolve(__dirname, 'src/pages/inscription.html'),
       }
     }
   }

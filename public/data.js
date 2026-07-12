@@ -754,3 +754,86 @@ function getFiliereById(domaineId, filiereId) {
   return domaine.filieres.find((f) => f.id === filiereId) || null;
 }
  
+
+const ANNONCES = [
+  // ---------- CONCOURS D'ENTRÉE ----------
+  {
+    id: "concours-ens-2026",
+    categorie: "concours",
+    libelleCategorie: "Concours d'entrée",
+    titre: "Concours d'entrée ENS 2026",
+    description: "Concours d'entrée à l'École Normale Supérieure. Filières : Lettres, Sciences, et Sciences Économiques.",
+    dateLimite: "15 Août 2026",
+    lieu: "Gabon",
+    couleurVar: "--concours-bleu",
+    icone: "fa-solid fa-building-columns",
+    lien: { type: "site", url: "https://www.ens.ga" },
+  },
+  {
+    id: "concours-iai-2026",
+    categorie: "concours",
+    libelleCategorie: "Concours d'entrée",
+    titre: "Concours d'entrée IAI 2026",
+    description: "Concours pour intégrer l'Institut Africain d'Informatique. Filière : Informatique et Réseaux.",
+    dateLimite: "10 Sept. 2026",
+    lieu: "Gabon",
+    couleurVar: "--concours-vert",
+    icone: "fa-solid fa-building-columns",
+    lien: { type: "pdf", url: "/documents/concours-iai-2026.pdf" },
+  },
+  {
+    id: "concours-enam-2026",
+    categorie: "concours",
+    libelleCategorie: "Concours d'entrée",
+    titre: "Examen d'entrée ENAM 2026",
+    description: "Examen d'entrée à l'École Nationale d'Administration et de Magistrature.",
+    dateLimite: "01 Sept. 2026",
+    lieu: "Gabon",
+    couleurVar: "--concours-violet",
+    icone: "fa-solid fa-building-columns",
+    lien: { type: "site", url: "https://www.enam.ga" },
+  },
+
+  // ---------- BOURSES D'ÉTUDES ----------
+  {
+    id: "bourse-mastercard-2026",
+    categorie: "bourse",
+    libelleCategorie: "Bourse d'études",
+    titre: "Bourse Mastercard Foundation 2026",
+    description: "Bourse complète pour études de licence dans une université partenaire en Afrique. Ouverte aux étudiants talentueux et engagés.",
+    dateLimite: "30 Sept. 2026",
+    lieu: "Afrique",
+    couleurVar: "--bourse-bleu",
+    icone: "fa-solid fa-earth-africa",
+    lien: { type: "site", url: "https://mastercardfdn.org" },
+  },
+  {
+    id: "bourse-chevening-2026",
+    categorie: "bourse",
+    libelleCategorie: "Bourse d'études",
+    titre: "Bourse Chevening 2026/2027",
+    description: "Bourses du gouvernement britannique pour études de Master au Royaume-Uni.",
+    dateLimite: "05 Nov. 2026",
+    lieu: "Royaume-Uni",
+    couleurVar: "--bourse-vert",
+    icone: "fa-solid fa-earth-africa",
+    lien: { type: "site", url: "https://www.chevening.org" },
+  },
+  {
+    id: "bourse-africa-tech-women-2026",
+    categorie: "bourse",
+    libelleCategorie: "Bourse d'études",
+    titre: "Bourse Africa Tech Women 2026",
+    description: "Soutien financier pour les jeunes femmes africaines souhaitant poursuivre une formation dans les domaines de la technologie.",
+    dateLimite: "15 Oct. 2026",
+    lieu: "En ligne",
+    couleurVar: "--bourse-violet",
+    icone: "fa-solid fa-earth-africa",
+    lien: { type: "pdf", url: "/documents/bourse-africa-tech-women-2026.pdf" },
+  },
+];
+
+// Accès pratique par id, utilisé dans annonces.js
+function getAnnonceById(id) {
+  return ANNONCES.find((a) => a.id === id) || null;
+}

@@ -1,0 +1,383 @@
+/* =========================================================
+   INSCRIPTION.CSS
+   Utilise les variables globales définies dans variable.css :
+   --primary-color, --primary-dark, --primary-light, --footer-color
+   ========================================================= */
+
+.page-inscription {
+  background-color: #f7f9fc;
+  padding: 56px 0 72px;
+  margin-top: 30px;
+}
+
+.inscription-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+/* --------- Colonne gauche --------- */
+.inscription-intro {
+  padding-top: 24px;
+}
+
+.badge-intro {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-light);
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.inscription-intro h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--footer-color);
+  margin-bottom: 14px;
+}
+
+.inscription-intro p {
+  font-size: 1.05rem;
+  color: #5b6270;
+  line-height: 1.55;
+  max-width: 420px;
+  margin-bottom: 32px;
+}
+
+.illustration-inscription {
+  position: relative;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration-inscription .icone-illustration {
+  font-size: 5rem;
+  color: var(--primary-color);
+  background: var(--primary-light);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration-inscription .icone-cloche {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  font-size: 1.6rem;
+  color: #fff;
+  background: #f59e0b;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+}
+
+.illustration-inscription .icone-avion {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  transform: rotate(-15deg);
+}
+
+/* --------- Carte formulaire --------- */
+.carte-inscription {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+  padding: 32px;
+}
+
+.section-form {
+  margin-bottom: 28px;
+}
+
+.titre-section-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.titre-section-form i {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.titre-section-form h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--footer-color);
+}
+
+.sous-titre-section-form {
+  font-size: 0.88rem;
+  color: #7d8493;
+  margin-bottom: 16px;
+}
+
+.champ-form {
+  margin-bottom: 18px;
+}
+
+.champ-form label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--footer-color);
+  margin-bottom: 6px;
+}
+
+.champ-avec-icone {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.champ-avec-icone i:first-child {
+  position: absolute;
+  left: 14px;
+  color: #9aa1ad;
+  font-size: 0.95rem;
+}
+
+.champ-avec-icone input {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border: 1px solid #e2e5eb;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  color: var(--footer-color);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.champ-avec-icone input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.btn-afficher-mdp {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #9aa1ad;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 4px;
+}
+
+.indice-champ {
+  font-size: 0.78rem;
+  color: #9aa1ad;
+  margin-top: 6px;
+}
+
+/* --------- Options / checkboxes --------- */
+.option-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e2e5eb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.option-checkbox:has(input:checked) {
+  border-color: var(--primary-color);
+  background: var(--primary-light);
+}
+
+.option-checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-visuel {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid #cfd4dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.option-checkbox input:checked + .checkbox-visuel {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.option-checkbox input:checked + .checkbox-visuel::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #fff;
+  font-size: 0.65rem;
+}
+
+.option-checkbox-texte {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--footer-color);
+}
+
+.option-checkbox-texte i {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.option-checkbox-texte strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.option-checkbox-texte small {
+  display: block;
+  font-size: 0.8rem;
+  color: #7d8493;
+  font-weight: 400;
+}
+
+.option-conditions {
+  align-items: center;
+}
+
+.texte-conditions {
+  font-size: 0.85rem;
+  color: #5b6270;
+}
+
+.texte-conditions a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.texte-conditions a:hover {
+  text-decoration: underline;
+}
+
+/* --------- Bouton principal --------- */
+.btn-creer-compte {
+  width: 100%;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  transition: background 0.15s ease;
+}
+
+.btn-creer-compte:hover {
+  background: var(--primary-dark);
+}
+
+.lien-connexion {
+  text-align: center;
+  font-size: 0.88rem;
+  color: #7d8493;
+  margin-top: 16px;
+}
+
+.lien-connexion a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lien-connexion a:hover {
+  text-decoration: underline;
+}
+
+/* --------- Points forts --------- */
+.grid-points-forts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e8ee;
+}
+
+.point-fort {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.icone-point-fort {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--primary-light);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.point-fort strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--footer-color);
+  margin-bottom: 3px;
+}
+
+.point-fort p {
+  font-size: 0.85rem;
+  color: #7d8493;
+}
+
+/* --------- Responsive --------- */
+@media (max-width: 900px) {
+  .inscription-container {
+    grid-template-columns: 1fr;
+  }
+
+  .illustration-inscription {
+    height: 160px;
+  }
+
+  .grid-points-forts {
+    grid-template-columns: 1fr;
+  }
+}

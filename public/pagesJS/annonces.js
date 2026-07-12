@@ -1,44 +1,60 @@
-async function loadData() {
-  try {
-    const res = await fetch('data.json');
-    const data = await res.json();
-    renderCards('bourses-list', data.bourses, '🌍', 'Bourse d\'études');
-    renderCards('concours-list', data.concours, '🏛️', 'Concours d\'entrée');
-  } catch (e) {
-    console.error("Erreur chargement data.json", e);
-  }
-}
+/**
+ * annonces.js
+ * -----------------------------------------------------------
+ * Génère les cartes de concours et de bourses à partir de
+ * ANNONCES (voir data-annonces.js).
+ *
+ * Le bouton d'action change selon annonce.lien.type :
+ *   - "pdf"  -> icône fichier, ouvre le PDF dans un nouvel onglet
+ *   - "site" -> icône flèche/lien externe, ouvre le site dans un nouvel onglet
+ * -----------------------------------------------------------
+ */
 
-function renderCards(containerId, items, icon, tag) {
-  const container = document.getElementById(containerId);
-  container.innerHTML = items.map(item => {
-    // Logique : si lien_site existe on prend ça, sinon lien_pdf
-    const lien = item.lien_site || item.lien_pdf || "#";
-    
-    return `
-    <div class="card ${item.couleur}">
-      <div class="card-left">
-        <div class="card-icon">${icon}</div>
-        <div class="card-content">
-          <div class="tag">${tag}</div>
-          <h3>${item.titre}</h3>
-          <p>${item.desc}</p>
-        </div>
-      </div>
-      <div class="card-right">
-        <div class="card-info">
-          <div class="label">📅 Date limite</div>
-          <div class="value">${item.date_limite}</div>
-          <div class="label">📍 ${item.lieu}</div>
-        </div>
-        <a href="${lien}" target="_blank" rel="noopener noreferrer" class="arrow-btn">→</a>
-      </div>
+function creerCarteAnnonce(annonce) {
+  const carte = document.createElement("div");
+  carte.className = "card-annonce";
+  carte.style.setProperty("--couleur-annonce", `var(${annonce.couleurVar})`);
+
+  const iconeAction =
+    annonce.lien.type === "pdf" ? "fa-solid fa-file-arrow-down" : "fa-solid fa-arrow-up-right-from-square";
+
+  carte.innerHTML = `
+    <div class="card-annonce-icone">
+      <i class="${annonce.icone}"></i>
     </div>
-  `}).join('');
+    <div class="card-annonce-contenu">
+      <span class="card-annonce-label">${annonce.libelleCategorie}</span>
+      <h3>${annonce.titre}</h3>
+      <p>${annonce.description}</p>
+    </div>
+    <div class="card-annonce-meta">
+      <div class="label-date"><i class="fa-regular fa-calendar"></i> Date limite</div>
+      <div class="valeur-date"><i class="fa-regular fa-calendar-check"></i> ${annonce.dateLimite}</div>
+      <div class="valeur-lieu"><i class="fa-solid fa-location-dot"></i> ${annonce.lieu}</div>
+    </div>
+    <a class="card-annonce-action" href="${annonce.lien.url}" target="_blank" rel="noopener noreferrer" title="Plus d'informations">
+      <i class="${iconeAction}"></i>
+    </a>
+  `;
+
+  return carte;
 }
 
-document.getElementById('btn-notif').addEventListener('click', () => {
-  alert('Notifications activées !');
-});
+function afficherAnnonces() {
+  const listeConcours = document.querySelector("#liste-concours");
+  const listeBourses = document.querySelector("#liste-bourses");
+  if (!listeConcours || !listeBourses) return;
 
-loadData();
+  listeConcours.innerHTML = "";
+  listeBourses.innerHTML = "";
+
+  ANNONCES.filter((a) => a.categorie === "concours").forEach((annonce) => {
+    listeConcours.appendChild(creerCarteAnnonce(annonce));
+  });
+
+  ANNONCES.filter((a) => a.categorie === "bourse").forEach((annonce) => {
+    listeBourses.appendChild(creerCarteAnnonce(annonce));
+  });
+}
+
+document.addEventListener("DOMContentLoaded", afficherAnnonces);

@@ -1,264 +1,250 @@
-/* =======================================
-   RESET + VARIABLES FLUIDES
-   ======================================= */
-:root {
-  --padding-x: clamp(16px, 5vw, 40px);
-  --title-size: clamp(26px, 4vw, 36px);
-  --text-size: clamp(14px, 1.5vw, 16px);
-  --card-padding: clamp(18px, 3vw, 24px);
-  --gap: clamp(12px, 2vw, 20px);
-}
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-}
-body { 
-  background: #f8f9fa; 
-  color: #1a1a1a; 
-  padding: var(--padding-x); 
-}
-.container { 
-  max-width: 1200px; 
-  width: 100%;
-  margin: 0 auto; 
+/* =========================================================
+   ANNONCES.CSS
+   ========================================================= */
+
+.page-annonces {
+  --concours-bleu: #2f6feb;
+  --concours-vert: #22a06b;
+  --concours-violet: #7c5cf5;
+  --bourse-bleu: #2f6feb;
+  --bourse-vert: #22a06b;
+  --bourse-violet: #7c5cf5;
+
+  background-color: #f7f8fb;
+  padding-bottom: 60px;
 }
 
-/* =======================================
-   HEADER - FLUIDE
-   ======================================= */
-.header { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  gap: var(--gap);
-  margin-bottom: clamp(30px, 5vw, 50px);
-  flex-wrap: wrap;
-}
-.header-text h1 { 
-  font-size: var(--title-size); 
-  font-weight: 700; 
-  margin-bottom: 10px; 
-}
-.header-text p { 
-  color: #555; 
-  line-height: 1.6; 
-  font-size: var(--text-size); 
-}
-.header-text span { 
-  color: #2563eb; 
-  font-weight: 600; 
-}
-.megaphone { 
-  width: clamp(60px, 10vw, 90px); 
-  height: clamp(60px, 10vw, 90px); 
-  flex-shrink: 0;
+/* --------- En-tête --------- */
+.entete-annonces {
+  padding: 48px 0 32px;
 }
 
-/* =======================================
-   SECTIONS
-   ======================================= */
-.section { 
-  margin-bottom: clamp(30px, 5vw, 50px); 
-}
-.section-header { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  gap: 12px;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
-}
-.section-header h2 { 
-  font-size: clamp(18px, 2.5vw, 22px); 
-  font-weight: 600; 
-  display: flex; 
-  align-items: center; 
-  gap: 10px; 
-}
-.icon { font-size: clamp(20px, 3vw, 24px); }
-.voir-tout { 
-  color: #2563eb; 
-  text-decoration: none; 
-  font-weight: 600; 
-  font-size: clamp(13px, 1.4vw, 14px);
-  white-space: nowrap;
-}
-.voir-tout:hover { text-decoration: underline; }
-
-/* =======================================
-   CARD - FLUIDE
-   ======================================= */
-.card { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  background: white; 
-  border-radius: 16px; 
-  padding: var(--card-padding); 
-  margin-bottom: 16px; 
-  border-left: 5px solid; 
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
-  transition: 0.3s; 
-  gap: var(--gap);
-  flex-wrap: wrap;
-}
-.card:hover { 
-  transform: translateX(6px); 
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+.entete-annonces-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 55px;
 }
 
-.card-left { 
-  display: flex; 
-  gap: var(--gap); 
-  flex: 1 1 60%;
-  min-width: 250px;
+.entete-annonces-texte h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #14161a;
 }
-.card-icon { 
-  width: clamp(40px, 6vw, 48px); 
-  height: clamp(40px, 6vw, 48px); 
-  border-radius: 50%; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  font-size: clamp(20px, 3vw, 24px); 
-  flex-shrink: 0; 
-}
-.card-content h3 { 
-  font-size: clamp(15px, 2vw, 17px); 
-  font-weight: 600; 
-  margin-bottom: 6px; 
-}
-.card-content .tag { 
-  font-size: clamp(11px, 1.3vw, 12px); 
-  color: #666; 
-  margin-bottom: 8px; 
-  display: flex; 
-  align-items: center; 
-  gap: 6px; 
-  font-weight: 500;
-}
-.card-content .tag::before { content: "●"; font-size: 10px; }
-.card-content p { 
-  font-size: clamp(13px, 1.5vw, 14px); 
-  color: #555; 
+
+.entete-annonces-texte p {
+  font-size: 1.05rem;
+  color: #5b6270;
+  max-width: 560px;
   line-height: 1.5;
 }
 
-.card-right { 
-  display: flex; 
-  align-items: center; 
-  gap: var(--gap); 
-  border-left: 1px solid #eee; 
-  padding-left: var(--gap); 
-  flex: 0 0 auto;
+.entete-annonces-texte p strong {
+  color: var(--concours-bleu);
 }
-.card-info { 
-  text-align: right; 
-  font-size: clamp(12px, 1.3vw, 13px); 
+
+.entete-annonces-icone {
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dce8ff, #eef2ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
-.card-info .label { 
-  color: #888; 
-  display: flex; 
-  align-items: center; 
-  gap: 5px; 
-  justify-content: flex-end; 
+
+.entete-annonces-icone i {
+  font-size: 2.6rem;
+  color: var(--concours-bleu);
+}
+
+/* --------- Sections --------- */
+.section-annonces {
+  margin-bottom: 36px;
+}
+
+.section-annonces-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.titre-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icone-titre {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #eef1f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #14161a;
+  font-size: 1rem;
+}
+
+.titre-section h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #14161a;
+}
+
+/* --------- Cartes annonces --------- */
+.liste-annonces {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card-annonce {
+  background: #fff;
+  border-radius: 12px;
+  border-left: 4px solid var(--couleur-annonce, var(--concours-bleu));
+  box-shadow: 0 1px 3px rgba(20, 22, 26, 0.06);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.card-annonce-icone {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--couleur-annonce, var(--concours-bleu)) 14%, white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-annonce-icone i {
+  font-size: 1.4rem;
+  color: var(--couleur-annonce, var(--concours-bleu));
+}
+
+.card-annonce-contenu {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-annonce-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--couleur-annonce, var(--concours-bleu));
   margin-bottom: 4px;
 }
-.card-info .value { 
-  font-weight: 600; 
-  margin-bottom: 8px;
-  color: #333;
+
+.card-annonce-label::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
 }
-.arrow-btn { 
-  width: clamp(36px, 5vw, 40px); 
-  height: clamp(36px, 5vw, 40px); 
-  border-radius: 50%; 
-  border: none; 
-  cursor: pointer; 
-  display: flex; 
-  align-items: center; 
+
+.card-annonce-contenu h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #14161a;
+  margin-bottom: 4px;
+}
+
+.card-annonce-contenu p {
+  font-size: 0.92rem;
+  color: #6a7180;
+  line-height: 1.4;
+}
+
+.card-annonce-meta {
+  flex-shrink: 0;
+  text-align: right;
+  min-width: 150px;
+}
+
+.card-annonce-meta .label-date {
+  font-size: 0.78rem;
+  color: #9198a3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.card-annonce-meta .valeur-date {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--couleur-annonce, var(--concours-bleu));
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.card-annonce-meta .valeur-lieu {
+  font-size: 0.85rem;
+  color: #6a7180;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.card-annonce-action {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--couleur-annonce, var(--concours-bleu));
+  color: #fff;
+  display: flex;
+  align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: clamp(16px, 2.5vw, 20px);
-  font-weight: bold;
-  transition: 0.2s;
+  font-size: 1rem;
+  transition: transform 0.15s ease, filter 0.15s ease;
 }
-.arrow-btn:hover { transform: scale(1.1); }
 
-/* COULEURS */
-.blue { border-color: #2563eb; } 
-.blue .card-icon { background: #eff6ff; } 
-.blue .arrow-btn { background: #eff6ff; color: #2563eb; }
-.green { border-color: #16a34a; } 
-.green .card-icon { background: #f0fdf4; } 
-.green .arrow-btn { background: #f0fdf4; color: #16a34a; }
-.purple { border-color: #9333ea; } 
-.purple .card-icon { background: #faf5ff; } 
-.purple .arrow-btn { background: #faf5ff; color: #9333ea; }
+.card-annonce-action:hover {
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
 
-/* =======================================
-   BANNER - FLUIDE
-   ======================================= */
-.banner { 
-  background: #eff6ff; 
-  border-radius: 16px; 
-  padding: var(--card-padding); 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  gap: var(--gap);
-  flex-wrap: wrap;
-}
-.banner-text h3 { 
-  font-size: clamp(16px, 2.2vw, 18px); 
-  margin-bottom: 6px; 
-  font-weight: 600;
-}
-.banner-text p { 
-  font-size: clamp(13px, 1.5vw, 14px); 
-  color: #555; 
-}
-#btn-notif { 
-  background: #2563eb; 
-  color: white; 
-  border: none; 
-  padding: clamp(10px, 2vw, 12px) clamp(16px, 3vw, 20px); 
-  border-radius: 10px; 
-  font-weight: 600; 
-  cursor: pointer; 
-  font-size: clamp(13px, 1.5vw, 14px);
-  transition: 0.2s;
-  white-space: nowrap;
-}
-#btn-notif:hover { background: #1d4ed8; }
-
-/* =======================================
-   BREAKPOINT MOBILE: < 768px
-   Passe en colonne
-   ======================================= */
-@media screen and (max-width: 767px) {
-  .header { flex-direction: column; text-align: center; }
-  .section-header { flex-direction: column; align-items: flex-start; }
-
-  .card { 
-    flex-direction: column; 
-    align-items: flex-start; 
+/* --------- Responsive --------- */
+@media (max-width: 720px) {
+  .entete-annonces-container {
+    flex-direction: column;
+    text-align: center;
   }
-  .card-left { flex: 1 1 100%; }
-  .card-right { 
-    border-left: none; 
-    padding-left: 0; 
-    margin-top: 16px; 
-    width: 100%; 
-    justify-content: space-between; 
-    border-top: 1px solid #eee;
-    padding-top: 16px;
-  }
-  .card-info { text-align: left; }
-  .card-info .label { justify-content: flex-start; }
 
-  .banner { flex-direction: column; text-align: center; }
-  #btn-notif { width: 100%; }
+  .card-annonce {
+    flex-wrap: wrap;
+  }
+
+  .card-annonce-meta {
+    text-align: left;
+    min-width: 100%;
+    order: 3;
+    margin-top: 8px;
+  }
+
+  .card-annonce-meta .label-date,
+  .card-annonce-meta .valeur-date,
+  .card-annonce-meta .valeur-lieu {
+    justify-content: flex-start;
+  }
 }

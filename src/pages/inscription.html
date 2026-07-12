@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/assets/css/inscription.css">
+    <link rel="stylesheet" href="/src/assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+      <!-- Header -->
+  <header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="/images/Logo-removebg-preview.png" alt="Logo">
+            <span>Schoolify</span>
+        </a>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li>
+                    <a href="../index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="/src/pages/domaines.html">Domaines</a>
+                </li>
+                <li>
+                    <a href="/src/pages/ecoles.html">Établissements</a>
+                </li>
+                <li>
+                    <a href="/src/pages/annonces.html">Établissements</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="/pages/connexion.html" class="btn-login">
+            Se connecter
+        </a>
+    </div>
+</header>
+<main class="page-inscription">
+  <div class="container inscription-container">
+    <!-- Colonne gauche : titre + illustration -->
+    <div class="inscription-intro">
+      <span class="badge-intro"><i class="fa-solid fa-graduation-cap"></i> Rejoignez l'Elite</span>
+      <h1>Créer votre compte</h1>
+      <p>
+        Ne manquez plus jamais une opportunité : recevez notifications et
+        annonces qui vous ressemblent.
+      </p>
+      <div class="illustration-inscription">
+        <i class="fa-solid fa-envelope-open-text icone-illustration"></i>
+        <i class="fa-solid fa-bell icone-cloche"></i>
+        <i class="fa-solid fa-paper-plane icone-avion"></i>
+      </div>
+    </div>
+
+    <!-- Colonne droite : formulaire -->
+    <div class="carte-inscription">
+      <form id="form-inscription" novalidate>
+        <!-- Informations personnelles -->
+        <div class="section-form">
+          <div class="titre-section-form">
+            <i class="fa-solid fa-user"></i>
+            <h2>Informations personnelles</h2>
+          </div>
+
+          <div class="champ-form">
+            <label for="nom-complet">Nom complet *</label>
+            <div class="champ-avec-icone">
+              <i class="fa-regular fa-user"></i>
+              <input type="text" id="nom-complet" name="nomComplet" placeholder="Entrez votre nom complet" required>
+            </div>
+          </div>
+
+          <div class="champ-form">
+            <label for="email">Email *</label>
+            <div class="champ-avec-icone">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="Entrez votre adresse email" required>
+            </div>
+          </div>
+
+          <div class="champ-form">
+            <label for="mot-de-passe">Mot de passe *</label>
+            <div class="champ-avec-icone">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="mot-de-passe" name="motDePasse" placeholder="Entrez votre mot de passe" required minlength="8">
+              <button type="button" class="btn-afficher-mdp" id="btn-afficher-mdp" aria-label="Afficher le mot de passe">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <p class="indice-champ">Au moins 8 caractères avec une majuscule et un chiffre</p>
+          </div>
+        </div>
+
+        <!-- Préférences de notifications -->
+        <div class="section-form">
+          <div class="titre-section-form">
+            <i class="fa-solid fa-bell"></i>
+            <h2>Préférences de notifications</h2>
+          </div>
+          <p class="sous-titre-section-form">Choisissez comment vous souhaitez recevoir les nouvelles annonces</p>
+
+          <label class="option-checkbox">
+            <input type="checkbox" name="notifEmail" checked>
+            <span class="checkbox-visuel"></span>
+            <span class="option-checkbox-texte">
+              <i class="fa-regular fa-envelope"></i>
+              <span>
+                <strong>Par email</strong>
+                <small>Recevez les nouvelles annonces par email</small>
+              </span>
+            </span>
+          </label>
+
+          <label class="option-checkbox">
+            <input type="checkbox" name="notifPlateforme" checked>
+            <span class="checkbox-visuel"></span>
+            <span class="option-checkbox-texte">
+              <i class="fa-solid fa-bell"></i>
+              <span>
+                <strong>Via notification</strong>
+                <small>Recevez les notifications sur la plateforme</small>
+              </span>
+            </span>
+          </label>
+        </div>
+
+        <!-- Conditions -->
+        <label class="option-checkbox option-conditions">
+          <input type="checkbox" name="accepteConditions" id="accepte-conditions" required>
+          <span class="checkbox-visuel"></span>
+          <span class="option-checkbox-texte texte-conditions">
+            J'accepte les <a href="#">Conditions d'utilisation</a> et la <a href="#">Politique de confidentialité</a>
+          </span>
+        </label>
+
+        <button type="submit" class="btn-creer-compte">
+          <i class="fa-solid fa-user-plus"></i> Créer mon compte
+        </button>
+
+        <p class="lien-connexion">
+          Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Points forts -->
+  <div class="container">
+    <div class="grid-points-forts">
+      <div class="point-fort">
+        <div class="icone-point-fort"><i class="fa-solid fa-bolt"></i></div>
+        <div>
+          <strong>Notifications en temps réel</strong>
+          <p>Recevez les annonces essentielles dès leur publication.</p>
+        </div>
+      </div>
+      <div class="point-fort">
+        <div class="icone-point-fort"><i class="fa-solid fa-bullseye"></i></div>
+        <div>
+          <strong>Annonces ciblées</strong>
+          <p>Un contenu personnalisé selon votre profil.</p>
+        </div>
+      </div>
+      <div class="point-fort">
+        <div class="icone-point-fort"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <strong>Vos données sont sécurisées</strong>
+          <p>Vos informations personnelles restent protégées.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <img src="/images/Logo-removebg-preview.png" alt="Logo School">
+            </div>
+            <span>School</span>
+          </div>
+          <p>Votre plateforme d'orientation pour un avenir réussi.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Domaines</a></li>
+            <li><a href="#">Filières</a></li>
+            <li><a href="#">Écoles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Conseils</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Suivez-nous</h4>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook" style="font-size: 2em;"></i></a>
+            <a href="#"><i class="fa-brands fa-square-whatsapp" style="font-size: 2em;"></i>
+  </footer> 
+<script src="/pagesJS/inscripstion.js"></script>
+</body>
+</html>

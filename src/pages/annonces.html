@@ -3,50 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/annonces.css">
   <title>Annonces - Bourses et Concours</title>
 </head>
 <body>
+   <!-- Header -->
+  <header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="/images/Logo-removebg-preview.png" alt="Logo">
+            <span>Schoolify</span>
+        </a>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li>
+                    <a href="../index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="/src/pages/domaines.html">Domaines</a>
+                </li>
+                <li>
+                    <a href="/src/pages/ecoles.html">Établissements</a>
+                </li>
+                <li>
+                    <a href="/src/pages/annonces.html">Établissements</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="/pages/connexion.html" class="btn-login">
+            Se connecter
+        </a>
+    </div>
+</header>
+  <main class="page-annonces">
+  <section class="entete-annonces">
+    <div class="container entete-annonces-container">
+      <div class="entete-annonces-texte">
+        <h1>Annonces</h1>
+        <p>
+          Découvrez les dernières bourses et concours d'entrée pour saisir
+          <strong>toutes les opportunités.</strong>
+        </p>
+      </div>
+      <div class="entete-annonces-icone">
+        <i class="fa-solid fa-bullhorn"></i>
+      </div>
+    </div>
+  </section>
 
   <div class="container">
-    <!-- HEADER -->
-    <div class="header">
-      <div class="header-text">
-        <h1>Annonces</h1>
-        <p>Découvrez les dernières <span>bourses et concours d'entrée</span> <br> pour saisir <span>toutes les opportunités</span>.</p>
+    <!-- SECTION 1 : CONCOURS D'ENTRÉE -->
+    <section class="section-annonces">
+      <div class="section-annonces-header">
+        <div class="titre-section">
+          <div class="icone-titre">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h2>Concours d'entrée</h2>
+        </div>
       </div>
-      <img src="https://cdn-icons-png.flaticon.com/512/3602/3602123.png" alt="megaphone" class="megaphone">
-    </div>
+      <div class="liste-annonces" id="liste-concours"></div>
+    </section>
 
-    <!-- SECTION BOURSES -->
-    <div class="section">
-      <div class="section-header">
-        <h2><span class="icon">🎓</span> Bourses</h2>
-        <a href="#" class="voir-tout">Voir toutes les bourses →</a>
+    <!-- SECTION 2 : BOURSES -->
+    <section class="section-annonces">
+      <div class="section-annonces-header">
+        <div class="titre-section">
+          <div class="icone-titre">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h2>Bourses</h2>
+        </div>
       </div>
-      <div id="bourses-list" class="cards-list"></div>
-    </div>
-
-    <!-- SECTION CONCOURS -->
-    <div class="section">
-      <div class="section-header">
-        <h2><span class="icon">📄</span> Concours d'entrée</h2>
-        <a href="#" class="voir-tout">Voir tous les concours →</a>
-      </div>
-      <div id="concours-list" class="cards-list"></div>
-    </div>
-
-    <!-- BANNER NOTIFICATION -->
-    <div class="banner">
-      <div class="banner-text">
-        <h3>🔔 Ne manquez aucune opportunité !</h3>
-        <p>Abonnez-vous pour recevoir les nouvelles annonces par email.</p>
-      </div>
-      <button id="btn-notif">Activer les notifications →</button>
-    </div>
+      <div class="liste-annonces" id="liste-bourses"></div>
+    </section>
   </div>
+</main>
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <img src="/images/Logo-removebg-preview.png" alt="Logo School">
+            </div>
+            <span>School</span>
+          </div>
+          <p>Votre plateforme d'orientation pour un avenir réussi.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Domaines</a></li>
+            <li><a href="#">Filières</a></li>
+            <li><a href="#">Écoles</a></li>
+          </ul>
+        </div>
 
-  <script type="module" src="/pagesJS/annonces.js"></script>
-  <script type="module" src="/data.js"></script>
+        <div class="footer-col">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Conseils</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Suivez-nous</h4>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook" style="font-size: 2em;"></i></a>
+            <a href="#"><i class="fa-brands fa-square-whatsapp" style="font-size: 2em;"></i>
+  </footer>  
+  <script  src="/data.js"></script>
+  <script  src="/pagesJS/annonces.js"></script>
 </body>
 </html>

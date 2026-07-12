@@ -22,7 +22,7 @@ document.querySelector('#app').innerHTML = `
                 </li>
             </ul>
         </nav>
-        <a href="/pages/connexion.html" class="btn-login">
+        <a href="/src/pages/inscription.html" class="btn-login">
             Se connecter
         </a>
     </div>
