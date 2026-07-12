@@ -860,15 +860,7 @@ function getAnnonceById(id) {
  */
 
 const ECOLES = [
-  {
-    id: "uob",
-    nom: "Université Omar Bongo",
-    logo: "/images/UOB.png",
-    localisation: "Libreville",
-    type: "public",
-    siteWeb: "https://www.uob.ga",
-    // pas de whatsapp : grande école publique, non contactable ainsi
-  },
+
   {
     id: "em-gabon",
     nom: "EM-Gabon Université",
@@ -878,18 +870,40 @@ const ECOLES = [
     whatsapp: "24177000000",
     siteWeb: "https://www.emgabon.com",
   },
+   
+  {
+    id: "uob",
+    nom: "Université Omar Bongo (UOB) ",
+    logo: "/images/UOB.png",
+    localisation: "Libreville",
+    type: "public",
+    siteWeb: "https://www.uob.ga",
+    // pas de whatsapp : grande école publique, non contactable ainsi
+  },
+
   {
     id: "ustm",
-    nom: "USTM",
+    nom: "Université des Sciences Polytechniques de Masuku (USTM)",
     logo: "/images/USTM.jpg",
     localisation: "Franceville",
     type: "public",
     siteWeb: "https://www.ustm.ga",
     // pas de whatsapp
   },
+   
+   {
+    id: "ings",
+    nom: "Institut Nation des Sciences de Gestion (INGS)",
+    logo: "/images/ings.png",
+    localisation: "Libreville",
+    type: "public",
+    whatsapp: "24162731542",
+    siteWeb: "https://www.ecolesenligne.net/341/home",
+  },
+  
   {
     id: "esgi",
-    nom: "ESGI",
+    nom: "Ecole de Sciences de Gestion et d'Informatique (ESGI)",
     logo: "/images/ESGI.png",
     localisation: "Libreville",
     type: "prive",
@@ -897,12 +911,32 @@ const ECOLES = [
     siteWeb: "https://www.esgi-gabon.com",
   },
   {
-    id: "iai",
-    nom: "Institut Africain d'Informatique (IAI)",
+    id: "imsa",
+    nom: "Institut de management et des Sciences Appliquées (IMSA)",
     logo: "/images/IMSA.png",
     localisation: "Libreville, Carrefour IAI",
+    type: "prive",
+    whatsapp:"24174993328",
+  },
+
+  {
+    id: "bbs",
+    nom: "BGFI Buisness School (BBS)",
+    logo: "/images/BBS.png",
+    localisation: "Libreville",
+    type: "prive",
+    siteWeb: "https://www.bbs-school.gabonshopping.com/site/administration_administration_de_bbs_school_gabon_20.php",
+    // pas de whatsapp : grande école publique, non contactable ainsi
+  },
+
+  {
+    id: "emn",
+    nom: "Ecole de Mine et de Métallurgie de Mouanda",
+    logo: "/images/EMM.jpg",
+    localisation: "Mouanda",
     type: "public",
-    // ni whatsapp, ni siteWeb pour l'instant
+    siteWeb: "https://e3mg.ga/filiere-formation",
+    whatsapp:"24174670077",
   },
 ];
 
