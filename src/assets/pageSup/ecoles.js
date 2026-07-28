@@ -1,13 +1,15 @@
 /**
- * ecoles.js
+ * ecoles.js (version Supabase)
  * -----------------------------------------------------------
- * Génère les cartes d'établissements à partir de ECOLES
- * (voir data-ecoles.js).
+ * Génère les cartes d'établissements à partir de la table `ecoles`
+ * dans Supabase, au lieu du fichier data-ecoles.js statique.
  *
  * Les boutons WhatsApp et Site web ne s'affichent que si la
  * donnée correspondante existe pour l'établissement.
  * -----------------------------------------------------------
  */
+
+import { supabase } from '../../supabaseClient.js'; // adapte le chemin selon l'emplacement réel
 
 function creerCardEcole(ecole) {
   const badgeClass = ecole.type === "public" ? "badge-public" : "badge-prive";
@@ -19,13 +21,12 @@ function creerCardEcole(ecole) {
        </a>`
     : "";
 
-  const boutonSiteWeb = ecole.siteWeb
-    ? `<a href="${ecole.siteWeb}" target="_blank" rel="noopener noreferrer" class="btn-site">
+  const boutonSiteWeb = ecole.site_web
+    ? `<a href="${ecole.site_web}" target="_blank" rel="noopener noreferrer" class="btn-site">
          <i class="fa-solid fa-globe"></i> Site web
        </a>`
     : "";
 
-  // Si aucun des deux boutons n'existe, on affiche un message discret à la place
   const actions = boutonWhatsapp || boutonSiteWeb
     ? `<div class="card-ecole-actions">${boutonWhatsapp}${boutonSiteWeb}</div>`
     : `<p class="aucun-contact">Contact non disponible pour le moment</p>`;
@@ -45,11 +46,18 @@ function creerCardEcole(ecole) {
   `;
 }
 
-function afficherEcoles() {
+async function afficherEcoles() {
   const container = document.getElementById("grid-ecoles");
   if (!container) return;
 
-  container.innerHTML = ECOLES.map(creerCardEcole).join("");
+  const { data: ecoles, error } = await supabase.from("ecoles").select("*");
+
+  if (error) {
+    console.error("Erreur Supabase (ecoles) :", error);
+    return;
+  }
+
+  container.innerHTML = ecoles.map(creerCardEcole).join("");
 }
 
 document.addEventListener("DOMContentLoaded", afficherEcoles);

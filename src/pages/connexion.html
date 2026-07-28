@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/assets/css/style.css">
+    <link rel="stylesheet" href="/src/assets/css/inscription.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <main class="page-inscription">
+  <div class="container inscription-container">
+    <div class="inscription-intro">
+      <span class="badge-intro"><i class="fa-solid fa-graduation-cap"></i> Content de vous revoir</span>
+      <h1>Connexion</h1>
+      <p>
+        Connectez-vous pour retrouver vos préférences et recevoir vos
+        notifications personnalisées.
+      </p>
+      <div class="illustration-inscription">
+        <i class="fa-solid fa-envelope-open-text icone-illustration"></i>
+        <i class="fa-solid fa-bell icone-cloche"></i>
+        <i class="fa-solid fa-paper-plane icone-avion"></i>
+      </div>
+    </div>
+
+    <div class="carte-inscription">
+      <form id="form-connexion" novalidate>
+        <div class="section-form">
+          <div class="titre-section-form">
+            <i class="fa-solid fa-user"></i>
+            <h2>Se connecter</h2>
+          </div>
+
+          <div class="champ-form">
+            <label for="email">Email *</label>
+            <div class="champ-avec-icone">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="Entrez votre adresse email" required>
+            </div>
+          </div>
+
+          <div class="champ-form">
+            <label for="mot-de-passe">Mot de passe *</label>
+            <div class="champ-avec-icone">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="mot-de-passe" name="motDePasse" placeholder="Entrez votre mot de passe" required>
+              <button type="button" class="btn-afficher-mdp" id="btn-afficher-mdp" aria-label="Afficher le mot de passe">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-creer-compte">
+          <i class="fa-solid fa-right-to-bracket"></i> Se connecter
+        </button>
+
+        <p class="lien-connexion">
+          Pas encore de compte ? <a href="inscription.html">Créer un compte</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+<script type="module" src="/src/assets/pageSup/connexion.js"></script>
+</html>

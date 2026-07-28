@@ -14,6 +14,8 @@ export default defineConfig({
         ecoles: resolve(__dirname, 'src/pages/ecoles.html'),
         annonces: resolve(__dirname, 'src/pages/annonces.html'),
         inscription: resolve(__dirname, 'src/pages/inscription.html'),
+        connexion: resolve(__dirname, 'src/pages/connexion.html'),
+        admin: resolve(__dirname, 'src/pages/admin.html'),
       }
     }
   }

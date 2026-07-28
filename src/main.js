@@ -1,5 +1,6 @@
-import '../public/pagesJS/data2.js';
-import '../public/pagesJS/domaines.js';
+import '../src/assets/data2.js';
+import '../src/assets/domaineAccueil.js';
+import '../src/authentification.js'
 import '../src/assets/css/style.css';
 import '../src/assets/css/domaines.css';
 document.querySelector('#app').innerHTML = `
@@ -211,3 +212,4 @@ document.querySelector('#app').innerHTML = `
   </footer>          
 </main>
 `
+

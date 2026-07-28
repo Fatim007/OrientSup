@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/assets/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Backoffice</title>
+</head>
+<body>
+    <main class="page-backoffice">
+  <div class="container">
+    <div class="backoffice-header">
+      <h1><i class="fa-solid fa-gauge"></i> Backoffice Admin</h1>
+      <p>Gestion du contenu de la plateforme</p>
+    </div>
+
+    <!-- Onglets -->
+    <div class="onglets-backoffice">
+      <button class="onglet-btn actif" data-cible="section-annonces">Annonces</button>
+      <button class="onglet-btn" data-cible="section-ecoles">Établissements</button>
+      <button class="onglet-btn" data-cible="section-domaines">Domaines</button>
+      <button class="onglet-btn" data-cible="section-filieres">Filières</button>
+    </div>
+
+    <!-- ========== ANNONCES ========== -->
+    <div id="section-annonces" class="section-onglet actif">
+      <section class="carte-backoffice">
+        <h2>Ajouter une annonce</h2>
+        <form id="form-annonce">
+          <div class="grille-form-2">
+            <div class="champ-form">
+              <label for="a-id">Identifiant unique *</label>
+              <input type="text" id="a-id" name="id" placeholder="ex: bourse-xyz-2027" required>
+            </div>
+            <div class="champ-form">
+              <label for="a-categorie">Catégorie *</label>
+              <select id="a-categorie" name="categorie" required>
+                <option value="concours">Concours d'entrée</option>
+                <option value="bourse">Bourse d'études</option>
+              </select>
+            </div>
+          </div>
+          <div class="champ-form">
+            <label for="a-titre">Titre *</label>
+            <input type="text" id="a-titre" name="titre" required>
+          </div>
+          <div class="champ-form">
+            <label for="a-description">Description *</label>
+            <textarea id="a-description" name="description" rows="3" required></textarea>
+          </div>
+          <div class="grille-form-2">
+            <div class="champ-form">
+              <label for="a-date">Date limite *</label>
+              <input type="date" id="a-date" name="date_limite" required>
+            </div>
+            <div class="champ-form">
+              <label for="a-lieu">Lieu *</label>
+              <input type="text" id="a-lieu" name="lieu" required>
+            </div>
+          </div>
+          <div class="grille-form-2">
+            <div class="champ-form">
+              <label for="a-lien-type">Type de lien *</label>
+              <select id="a-lien-type" name="lien_type" required>
+                <option value="site">Site web</option>
+                <option value="pdf">Fichier PDF</option>
+              </select>
+            </div>
+            <div class="champ-form">
+              <label for="a-lien-url">URL du lien *</label>
+              <input type="text" id="a-lien-url" name="lien_url" required>
+            </div>
+          </div>
+          <button type="submit" class="btn-principal"><i class="fa-solid fa-plus"></i> Ajouter l'annonce</button>
+        </form>
+      </section>
+      <section class="carte-backoffice">
+        <h2>Annonces existantes</h2>
+        <div id="liste-annonces-admin"></div>
+      </section>
+    </div>
+
+    <!-- ========== ÉCOLES ========== -->
+    <div id="section-ecoles" class="section-onglet">
+      <section class="carte-backoffice">
+        <h2>Ajouter un établissement</h2>
+        <form id="form-ecole">
+          <div class="grille-form-2">
+            <div class="champ-form">
+              <label for="e-id">Identifiant unique *</label>
+              <input type="text" id="e-id" name="id" placeholder="ex: ecole-xyz" required>
+            </div>
+            <div class="champ-form">
+              <label for="e-type">Type *</label>
+              <select id="e-type" name="type" required>
+                <option value="public">Public</option>
+                <option value="prive">Privé</option>
+              </select>
+            </div>
+          </div>
+          <div class="champ-form">
+            <label for="e-nom">Nom *</label>
+            <input type="text" id="e-nom" name="nom" required>
+          </div>
+          <div class="grille-form-2">
+            <div class="champ-form">
+              <label for="e-logo">Chemin du logo</label>
+              <input type="text" id="e-logo" name="logo" placeholder="/images/exemple.png">
+            </div>
+            <div class="champ-form">
+              <label for="e-localisation">Localisation *</label>
+              <input type="text" id="e-localisation" name="localisation" required>
+            </div>
+          </div>
+          <div class="grille-form-2">
+            <div class="champ-form">
+              <label for="e-whatsapp">WhatsApp (optionnel)</label>
+              <input type="text" id="e-whatsapp" name="whatsapp" placeholder="24177000000">
+            </div>
+            <div class="champ-form">
+              <label for="e-siteweb">Site web (optionnel)</label>
+              <input type="text" id="e-siteweb" name="site_web" placeholder="https://...">
+            </div>
+          </div>
+          <button type="submit" class="btn-principal"><i class="fa-solid fa-plus"></i> Ajouter l'établissement</button>
+        </form>
+      </section>
+      <section class="carte-backoffice">
+        <h2>Établissements existants</h2>
+        <div id="liste-ecoles-admin"></div>
+      </section>
+    </div>
+
+    <!-- ========== DOMAINES ========== -->
+    <div id="section-domaines" class="section-onglet">
+      <section class="carte-backoffice">
+        <h2>Ajouter un domaine</h2>
+        <form id="form-domaine">
+          <div class="grille-form-2">
+            <div class="champ-form">
+              <label for="d-id">Identifiant unique *</label>
+              <input type="text" id="d-id" name="id" placeholder="ex: sciences-tech" required>
+            </div>
+            <div class="champ-form">
+              <label for="d-couleur">Couleur du domaine *</label>
+              <input type="color" id="d-couleur" name="couleur_var" value="#2563EB" required>
+            </div>
+          </div>
+          <div class="champ-form">
+            <label for="d-nom">Nom *</label>
+            <input type="text" id="d-nom" name="nom" required>
+          </div>
+          <div class="champ-form">
+            <label for="d-description">Description *</label>
+            <textarea id="d-description" name="description" rows="2" required></textarea>
+          </div>
+          <div class="champ-form">
+            <label for="d-icone">Icône Font Awesome *</label>
+            <input type="text" id="d-icone" name="icone" placeholder="fa-solid fa-computer" required>
+          </div>
+          <button type="submit" class="btn-principal"><i class="fa-solid fa-plus"></i> Ajouter le domaine</button>
+        </form>
+      </section>
+      <section class="carte-backoffice">
+        <h2>Domaines existants</h2>
+        <div id="liste-domaines-admin"></div>
+      </section>
+    </div>
+
+    <!-- ========== FILIÈRES ========== -->
+    <div id="section-filieres" class="section-onglet">
+      <section class="carte-backoffice">
+        <h2>Ajouter une filière</h2>
+        <form id="form-filiere">
+          <div class="grille-form-2">
+            <div class="champ-form">
+              <label for="f-id">Identifiant unique *</label>
+              <input type="text" id="f-id" name="id" placeholder="ex: genie-logiciel" required>
+            </div>
+            <div class="champ-form">
+              <label for="f-domaine">Domaine *</label>
+              <select id="f-domaine" name="domaine_id" required></select>
+            </div>
+          </div>
+          <div class="champ-form">
+            <label for="f-nom">Nom *</label>
+            <input type="text" id="f-nom" name="nom" required>
+          </div>
+          <div class="champ-form">
+            <label for="f-resume">Résumé *</label>
+            <input type="text" id="f-resume" name="resume" required>
+          </div>
+          <div class="grille-form-2">
+            <div class="champ-form">
+              <label for="f-duree">Durée *</label>
+              <input type="text" id="f-duree" name="duree" placeholder="3 ans (Licence)" required>
+            </div>
+            <div class="champ-form">
+              <label for="f-niveau">Niveau *</label>
+              <input type="text" id="f-niveau" name="niveau" placeholder="Licence / Master" required>
+            </div>
+          </div>
+          <div class="champ-form">
+            <label for="f-apercu">Aperçu (description longue) *</label>
+            <textarea id="f-apercu" name="apercu" rows="3" required></textarea>
+          </div>
+          <div class="champ-form">
+            <label for="f-debouches">Débouchés (séparés par des virgules) *</label>
+            <input type="text" id="f-debouches" name="debouches" placeholder="Développeur, Ingénieur logiciel, ..." required>
+          </div>
+          <div class="champ-form">
+            <label for="f-competences">Compétences (séparées par des virgules) *</label>
+            <input type="text" id="f-competences" name="competences" placeholder="Programmation, Architecture, ..." required>
+          </div>
+          <div class="champ-form">
+            <label for="f-conditions">Conditions d'admission (séparées par des virgules) *</label>
+            <input type="text" id="f-conditions" name="conditions_admission" placeholder="Baccalauréat scientifique, Dossier scolaire, ..." required>
+          </div>
+          <div class="champ-form">
+            <label for="f-bac">Séries de bac recommandées (séparées par des virgules) *</label>
+            <input type="text" id="f-bac" name="filieres_bac" placeholder="Bac D, Bac C, ..." required>
+          </div>
+          <div class="champ-form">
+            <label for="f-etablissements">Établissements (format JSON)</label>
+            <textarea id="f-etablissements" name="etablissements" rows="3" placeholder='[{"nom": "Nom Ecole", "ville": "Libreville", "note": 4.5}]'></textarea>
+            <!-- <p class="indice-champ">Optionnel. Laisse vide si aucun établissement à lister pour cette filière.</p> -->
+          </div>
+          <button type="submit" class="btn-principal"><i class="fa-solid fa-plus"></i> Ajouter la filière</button>
+        </form>
+      </section>
+      <section class="carte-backoffice">
+        <h2>Filières existantes</h2>
+        <div id="liste-filieres-admin"></div>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+<script type="module" src="/src/assets/pageSup/admin.js"></script>
+</html>
