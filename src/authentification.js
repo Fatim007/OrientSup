@@ -42,7 +42,7 @@ async function mettreAJourHeader() {
           } catch (err) {
             console.error("Erreur lors de la déconnexion :", err);
           }
-          window.location.href = "/main.js"; // adapte vers ta vraie page d'accueil
+          window.location.href = "/index.html"; l
         });
         bouton.dataset.listenerAjoute = "true";
       }
