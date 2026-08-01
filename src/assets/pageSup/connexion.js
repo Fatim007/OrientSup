@@ -46,7 +46,7 @@ function initFormulaireConnexion() {
     }
 
     // Connexion réussie
-    window.location.href = "index.html"; // adapte vers la page d'accueil ou tableau de bord
+    window.location.href = "/index.html"; // adapte vers la page d'accueil ou tableau de bord
   });
 }
 
