@@ -6,11 +6,12 @@
  * -----------------------------------------------------------
  */
 
-import { supabase } from '../../supabaseClient.js'; // adapte le chemin selon l'emplacement réel
+import { supabase } from '../../supabaseClient.js'; 
 
 // ============================================================
 // 1. PROTECTION D'ACCÈS
 // ============================================================
+
 async function verifierAcces() {
   const { data: { session } } = await supabase.auth.getSession();
 
@@ -169,12 +170,25 @@ function initFormulaireDomaine() {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    let etablissementsExcellence = null;
+    const texteEtabExc = form.etablissements_excellence.value.trim();
+    if (texteEtabExc) {
+      try {
+        etablissementsExcellence = JSON.parse(texteEtabExc);
+      } catch (err) {
+        alert("Le champ 'Établissements d'excellence' doit être un JSON valide, ou laissé vide. Exemple : [{\"nom\": \"Ecole X\", \"ville\": \"Libreville\", \"note\": 4.5}]");
+        return;
+      }
+    }
+
     const nouveauDomaine = {
       id: form.id.value.trim(),
       nom: form.nom.value.trim(),
       description: form.description.value.trim(),
       icone: form.icone.value.trim(),
       couleur_var: form.couleur_var.value.trim(),
+      etablissements_excellence: etablissementsExcellence,
     };
     const { error } = await supabase.from("domaines").insert(nouveauDomaine);
     if (error) { alert("Erreur : " + error.message); return; }

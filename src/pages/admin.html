@@ -160,6 +160,11 @@
             <label for="d-icone">Icône Font Awesome *</label>
             <input type="text" id="d-icone" name="icone" placeholder="fa-solid fa-computer" required>
           </div>
+          <div class="champ-form">
+            <label for="d-etablissements-excellence">Établissements d'excellence (format JSON)</label>
+            <textarea id="d-etablissements-excellence" name="etablissements_excellence" rows="3" placeholder='[{"nom": "Nom Ecole", "ville": "Libreville", "note": 4.5}]'></textarea>
+            <p class="indice-champ">Optionnel. Laisse vide si aucun établissement d'excellence à mettre en avant pour ce domaine.</p>
+          </div>
           <button type="submit" class="btn-principal"><i class="fa-solid fa-plus"></i> Ajouter le domaine</button>
         </form>
       </section>
@@ -225,7 +230,7 @@
           <div class="champ-form">
             <label for="f-etablissements">Établissements (format JSON)</label>
             <textarea id="f-etablissements" name="etablissements" rows="3" placeholder='[{"nom": "Nom Ecole", "ville": "Libreville", "note": 4.5}]'></textarea>
-            <!-- <p class="indice-champ">Optionnel. Laisse vide si aucun établissement à lister pour cette filière.</p> -->
+            <p class="indice-champ">Optionnel. Laisse vide si aucun établissement à lister pour cette filière.</p>
           </div>
           <button type="submit" class="btn-principal"><i class="fa-solid fa-plus"></i> Ajouter la filière</button>
         </form>

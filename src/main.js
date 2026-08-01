@@ -8,7 +8,7 @@ document.querySelector('#app').innerHTML = `
     <div class="container">
         <a href="../index.html" class="logo">
             <img src="/images/Logo-removebg-preview.png" alt="Logo">
-            <span>Schoolify</span>
+            <span>OrientSup</span>
         </a>
         <nav class="navbar">
             <ul class="nav-links">
@@ -182,7 +182,7 @@ document.querySelector('#app').innerHTML = `
             <div class="logo-icon">
               <img src="/images/Logo-removebg-preview.png" alt="Logo School">
             </div>
-            <span>School</span>
+            <span>OrientSup</span>
           </div>
           <p>Votre plateforme d'orientation pour un avenir réussi.</p>
         </div>
