@@ -1,10 +1,3 @@
-/**
- * annonces.js (version Supabase)
- * -----------------------------------------------------------
- * Génère les cartes de concours et de bourses à partir de la
- * table `annonces` dans Supabase.
- * -----------------------------------------------------------
- */
 
 import { supabase } from '../../supabaseClient.js'; // adapte le chemin selon l'emplacement réel
 

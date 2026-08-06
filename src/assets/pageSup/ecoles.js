@@ -1,15 +1,5 @@
-/**
- * ecoles.js (version Supabase)
- * -----------------------------------------------------------
- * Génère les cartes d'établissements à partir de la table `ecoles`
- * dans Supabase, au lieu du fichier data-ecoles.js statique.
- *
- * Les boutons WhatsApp et Site web ne s'affichent que si la
- * donnée correspondante existe pour l'établissement.
- * -----------------------------------------------------------
- */
 
-import { supabase } from '../../supabaseClient.js'; // adapte le chemin selon l'emplacement réel
+import { supabase } from '../../supabaseClient.js';
 
 function creerCardEcole(ecole) {
   const badgeClass = ecole.type === "public" ? "badge-public" : "badge-prive";

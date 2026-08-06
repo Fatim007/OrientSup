@@ -1,17 +1,7 @@
-/**
- * backoffice-admin.js
- * -----------------------------------------------------------
- * Protège l'accès (admin uniquement) et gère l'ajout/suppression
- * des annonces, établissements, domaines et filières.
- * -----------------------------------------------------------
- */
 
 import { supabase } from '../../supabaseClient.js'; 
 
-// ============================================================
-// 1. PROTECTION D'ACCÈS
-// ============================================================
-
+// Protection d'accès1
 async function verifierAcces() {
   const { data: { session } } = await supabase.auth.getSession();
 
@@ -36,9 +26,7 @@ async function verifierAcces() {
   return true;
 }
 
-// ============================================================
-// 2. GESTION DES ONGLETS
-// ============================================================
+// Gestion des onglets
 function initOnglets() {
   const boutons = document.querySelectorAll(".onglet-btn");
   boutons.forEach((btn) => {
@@ -51,14 +39,11 @@ function initOnglets() {
   });
 }
 
-// Petit utilitaire : transforme "a, b, c" en ["a", "b", "c"] (en retirant les vides)
 function texteVersTableau(texte) {
   return texte.split(",").map((s) => s.trim()).filter(Boolean);
 }
 
-// ============================================================
-// 3. ANNONCES
-// ============================================================
+// Annonces
 async function afficherListeAnnonces() {
   const container = document.querySelector("#liste-annonces-admin");
   if (!container) return;
@@ -100,9 +85,7 @@ function initFormulaireAnnonce() {
   });
 }
 
-// ============================================================
-// 4. ÉCOLES
-// ============================================================
+// écoles
 async function afficherListeEcoles() {
   const container = document.querySelector("#liste-ecoles-admin");
   if (!container) return;
@@ -140,9 +123,7 @@ function initFormulaireEcole() {
   });
 }
 
-// ============================================================
-// 5. DOMAINES
-// ============================================================
+// domaines
 async function afficherListeDomaines() {
   const container = document.querySelector("#liste-domaines-admin");
   if (!container) return;
@@ -157,7 +138,6 @@ async function afficherListeDomaines() {
     </div>
   `).join("");
 
-  // Remplit aussi le <select> du formulaire filières avec la liste à jour
   const selectDomaine = document.querySelector("#f-domaine");
   if (selectDomaine) {
     selectDomaine.innerHTML = data.map((d) => `<option value="${d.id}">${d.nom}</option>`).join("");
@@ -197,9 +177,7 @@ function initFormulaireDomaine() {
   });
 }
 
-// ============================================================
-// 6. FILIÈRES
-// ============================================================
+// Filières
 async function afficherListeFilieres() {
   const container = document.querySelector("#liste-filieres-admin");
   if (!container) return;
@@ -255,9 +233,7 @@ function initFormulaireFiliere() {
   });
 }
 
-// ============================================================
-// 7. SUPPRESSION GÉNÉRIQUE (délégation d'événement)
-// ============================================================
+
 function initSuppressionGenerique() {
   document.addEventListener("click", async (e) => {
     const btn = e.target.closest(".btn-supprimer");
@@ -278,9 +254,7 @@ function initSuppressionGenerique() {
   });
 }
 
-// ============================================================
-// INITIALISATION GÉNÉRALE
-// ============================================================
+// Initialisation générale
 document.addEventListener("DOMContentLoaded", async () => {
   const accesAutorise = await verifierAcces();
   if (!accesAutorise) return;
@@ -290,7 +264,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   afficherListeAnnonces();
   afficherListeEcoles();
-  afficherListeDomaines(); // remplit aussi le <select> du formulaire filières
+  afficherListeDomaines(); 
   afficherListeFilieres();
 
   initFormulaireAnnonce();

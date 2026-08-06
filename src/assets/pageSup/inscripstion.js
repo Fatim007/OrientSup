@@ -1,17 +1,5 @@
-/**
- * inscription.js (version Supabase Auth)
- * -----------------------------------------------------------
- * Gère l'affichage/masquage du mot de passe et la vraie
- * inscription via Supabase Auth.
- *
- * Le trigger SQL "on_auth_user_created" crée automatiquement
- * une ligne dans `profils` dès l'inscription (avec role='etudiant'
- * par défaut). On met ensuite à jour les préférences de
- * notifications choisies dans le formulaire.
- * -----------------------------------------------------------
- */
 
-import { supabase } from '../../supabaseClient'; // adapte le chemin selon l'emplacement réel
+import { supabase } from '../../supabaseClient'; 
 
 function initAfficherMotDePasse() {
   const btn = document.querySelector("#btn-afficher-mdp");
@@ -69,10 +57,6 @@ function initFormulaireInscription() {
       boutonSubmit.innerHTML = '<i class="fa-solid fa-user-plus"></i> Créer mon compte';
       return;
     }
-
-    // 2. Mettre à jour les préférences de notifications choisies
-    // (le trigger crée déjà la ligne profils avec les valeurs par défaut à true,
-    // ici on applique les vrais choix cochés dans le formulaire)
     if (data.user) {
       const { error: erreurProfil } = await supabase
         .from("profils")

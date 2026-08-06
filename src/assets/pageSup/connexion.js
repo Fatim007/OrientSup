@@ -1,9 +1,6 @@
-/**
- * connexion.js (Supabase Auth)
- * -----------------------------------------------------------
- */
+// connexion.js (Supabase Auth)
 
-import { supabase } from '../../supabaseClient.js'; // adapte le chemin selon l'emplacement réel
+import { supabase } from '../../supabaseClient.js'; 
 
 function initAfficherMotDePasse() {
   const btn = document.querySelector("#btn-afficher-mdp");
@@ -46,7 +43,7 @@ function initFormulaireConnexion() {
     }
 
     // Connexion réussie
-    window.location.href = "/index.html"; // adapte vers la page d'accueil ou tableau de bord
+    window.location.href = "/index.html"; // chemin page d'acceuil
   });
 }
 

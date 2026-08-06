@@ -1,18 +1,11 @@
-/**
- * domaines.js (version Supabase) — pour domaines.html uniquement
- * -----------------------------------------------------------
- */
-
-import { supabase } from '../../supabaseClient.js'; // adapte le chemin selon l'emplacement réel
+//domaines version supabase
+import { supabase } from '../../supabaseClient.js'; 
 
 function creerCarteDomaine(domaine, nbFilieres) {
   const carte = document.createElement("a");
   carte.href = `/src/pages/filieres.html?domaine=${domaine.id}`;
   carte.className = "card-domaine";
 
-  // Compatibilité double format :
-  // - anciens domaines : couleur_var contient un nom de variable CSS (ex: "--informatique")
-  // - nouveaux domaines (ajoutés via le backoffice) : couleur_var contient un code hex direct (ex: "#2563EB")
   const couleur = domaine.couleur_var.startsWith("#")
     ? domaine.couleur_var
     : `var(${domaine.couleur_var})`;

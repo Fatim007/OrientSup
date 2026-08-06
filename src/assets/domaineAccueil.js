@@ -1,4 +1,4 @@
-import { DOMAINES } from './data2.js'; // adapte le chemin si besoin selon l'emplacement exact des 2 fichiers
+import { DOMAINES } from './data2.js'; 
 
 function creerCarteDomaine(domaine) {
   const carte = document.createElement("a");
