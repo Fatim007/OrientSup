@@ -1,5 +1,4 @@
-//domaines version supabase
-import { supabase } from '../../supabaseClient.js'; 
+import { supabase } from '../../supabaseClient.js'; // adapte le chemin selon l'emplacement réel
 
 function creerCarteDomaine(domaine, nbFilieres) {
   const carte = document.createElement("a");
@@ -26,35 +25,26 @@ async function afficherDomaines(limit = null) {
   const grille = document.querySelector(".grid-domaines");
   if (!grille) return;
 
-  // 1. Récupérer les domaines
-  let requeteDomaines = supabase.from("domaines").select("*");
-  if (limit) requeteDomaines = requeteDomaines.limit(limit);
-  const { data: domaines, error: erreurDomaines } = await requeteDomaines;
+  grille.innerHTML = `
+    <div class="loader-conteneur">
+      <div class="loader-spinner"></div>
+      <p>Chargement des domaines...</p>
+    </div>
+  `;
 
-  if (erreurDomaines) {
-    console.error("Erreur Supabase (domaines) :", erreurDomaines);
+
+  let requete = supabase.from("domaines").select("*, filieres(count)");
+  if (limit) requete = requete.limit(limit);
+  const { data: domaines, error } = await requete;
+
+  if (error) {
+    console.error("Erreur Supabase (domaines) :", error);
     return;
   }
 
-  // 2. Récupérer uniquement les colonnes nécessaires au comptage des filières
-  const { data: filieres, error: erreurFilieres } = await supabase
-    .from("filieres")
-    .select("id, domaine_id");
-
-  if (erreurFilieres) {
-    console.error("Erreur Supabase (filieres) :", erreurFilieres);
-  }
-
-  // 3. Compter le nombre de filières par domaine_id
-  const compteurParDomaine = {};
-  (filieres ?? []).forEach((f) => {
-    compteurParDomaine[f.domaine_id] = (compteurParDomaine[f.domaine_id] ?? 0) + 1;
-  });
-
-  // 4. Afficher les cartes avec le bon compteur
   grille.innerHTML = "";
   domaines.forEach((domaine) => {
-    const nbFilieres = compteurParDomaine[domaine.id] ?? 0;
+    const nbFilieres = domaine.filieres?.[0]?.count ?? 0;
     grille.appendChild(creerCarteDomaine(domaine, nbFilieres));
   });
 }
